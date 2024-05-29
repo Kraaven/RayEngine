@@ -1,0 +1,14 @@
+C:\Users\dhruv\RiderProjects\RayGame\RayGame\bin\Debug\net7.0\RayGame.exe
+C:\Users\dhruv\RiderProjects\RayGame\RayGame\bin\Debug\net7.0\RayGame.deps.json
+C:\Users\dhruv\RiderProjects\RayGame\RayGame\bin\Debug\net7.0\RayGame.runtimeconfig.json
+C:\Users\dhruv\RiderProjects\RayGame\RayGame\bin\Debug\net7.0\RayGame.dll
+C:\Users\dhruv\RiderProjects\RayGame\RayGame\bin\Debug\net7.0\RayGame.pdb
+C:\Users\dhruv\RiderProjects\RayGame\RayGame\obj\Debug\net7.0\RayGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dhruv\RiderProjects\RayGame\RayGame\obj\Debug\net7.0\RayGame.AssemblyInfoInputs.cache
+C:\Users\dhruv\RiderProjects\RayGame\RayGame\obj\Debug\net7.0\RayGame.AssemblyInfo.cs
+C:\Users\dhruv\RiderProjects\RayGame\RayGame\obj\Debug\net7.0\RayGame.csproj.CoreCompileInputs.cache
+C:\Users\dhruv\RiderProjects\RayGame\RayGame\obj\Debug\net7.0\RayGame.dll
+C:\Users\dhruv\RiderProjects\RayGame\RayGame\obj\Debug\net7.0\refint\RayGame.dll
+C:\Users\dhruv\RiderProjects\RayGame\RayGame\obj\Debug\net7.0\RayGame.pdb
+C:\Users\dhruv\RiderProjects\RayGame\RayGame\obj\Debug\net7.0\RayGame.genruntimeconfig.cache
+C:\Users\dhruv\RiderProjects\RayGame\RayGame\obj\Debug\net7.0\ref\RayGame.dll
