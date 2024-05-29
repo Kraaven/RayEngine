@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "iWcvurSupTGCwrYBmOYDErj+tEKaaMKuSXfJMelr9Cn7xgz8KFI5XApinC2TNc43UYDm4RBAvBQ1wemQHDEcHg==",
+  "dgSpecHash": "8Pyl6DyVZaA52zLJ7Utb+KZvDu3qrH5c/vVP+2Ef9yx9uopbr/muOMDCO3b8nwcH0io8VLEJ+IrPbGg5ovjYnQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\dhruv\\RiderProjects\\RayGame\\RayGame\\RayGame.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\dhruv\\.nuget\\packages\\raylib-cs\\6.0.0\\raylib-cs.6.0.0.nupkg.sha512",
+    "C:\\Users\\dhruv\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }
