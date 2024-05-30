@@ -106,16 +106,30 @@ public class GameObject
         RenderObject();
     }
 
-    public IGameComponent AddComponent<T>() where T : IGameComponent, new()
+    public T AddComponent<T>() where T : IGameComponent, new()
     {
-        GameComponents.Add(new T());
-        GameComponents.Last().Container = this;
-        GameComponents.Last().Start();
-        return GameComponents.Last();
+        if (GameComponents.Any(item => item is T))
+        {
+            return GetComponent<T>();
+        }
+        else
+        {
+            T gameComponent = new T();
+            GameComponents.Add(gameComponent);
+            gameComponent.Container = this;
+            GameComponents.Last().Start();
+            return gameComponent;
+        }
+        
     }
     
     public float GetRotation()
     {
         return Rotation * (180 / MathF.PI);
+    }
+
+    public T GetComponent<T>()
+    {
+        return GameComponents.OfType<T>().FirstOrDefault();
     }
 }
