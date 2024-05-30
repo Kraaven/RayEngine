@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using System.ComponentModel;
+using System.Numerics;
 using Raylib_cs;
 
 namespace RayGame;
@@ -10,7 +11,8 @@ public class GameObject
     public float Rotation;
     public List<Vector2> Vertices;
     public float Scale;
-    private List<IGameComponent> GameComponents = new List<IGameComponent>();
+    public Guid ID = Guid.NewGuid();
+    public List<IGameComponent> GameComponents = new List<IGameComponent>();
 
     void InitValues()
     {
@@ -104,10 +106,16 @@ public class GameObject
         RenderObject();
     }
 
-    public IGameComponent AddComponent<T>() where T : IGameComponent
+    public IGameComponent AddComponent<T>() where T : IGameComponent, new()
     {
-        GameComponents.Add((T)Activator.CreateInstance(typeof(T)));
+        GameComponents.Add(new T());
         GameComponents.Last().Container = this;
+        GameComponents.Last().Start();
         return GameComponents.Last();
+    }
+    
+    public float GetRotation()
+    {
+        return Rotation * (180 / MathF.PI);
     }
 }

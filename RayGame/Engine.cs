@@ -6,8 +6,12 @@ using Raylib_cs;
 static class Engine
 {
     public static List<GameObject> GameObjectList = new List<GameObject>();
+    public static Random random = new Random();
+    public static Stopwatch GameClock = new Stopwatch();
     public static void Main()
     {
+        
+        Raylib.SetTargetFPS(60);
         Raylib.InitWindow(800,480,"Hello World");
         // var obj = Program.CreateGameObject("Test", new Vector2(250,200));
         // obj.AddVertices(new []{(50f,50f),(-50f,50f),(-50f,-50f),(50f,-50f)});
@@ -17,10 +21,8 @@ static class Engine
         var M = CreateGameObject("Manager");
         M.AddComponent<Manager>();
         M.StartActions();
+        GameClock.Start();
         
-        Stopwatch Clock = new Stopwatch();
-        Clock.Start();
-
         foreach (var gameObject in GameObjectList)
         {
             if (gameObject.Name != "Manager")
@@ -34,7 +36,7 @@ static class Engine
             Raylib.ClearBackground(Color.White);
             // test.RenderObject();
             // test.Rotate(0.05f);
-            foreach (var OBJECT in GameObjectList)
+            foreach (var OBJECT in GameObjectList.ToArray())
             {
                 OBJECT.UpdateActions();
             }
