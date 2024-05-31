@@ -3,6 +3,8 @@ using System.Diagnostics;
 using System.Numerics;
 using RayGame;
 using Raylib_cs;
+using Transform = RayGame.Transform;
+
 static class Engine
 {
     public static List<GameObject> GameObjectList = new List<GameObject>();
@@ -47,19 +49,18 @@ static class Engine
         GameObjectList.Last().Name = name;
         return GameObjectList.Last();
     }
-    public static GameObject CreateGameObject(string name, Vector2 Position)
+    public static GameObject CreateGameObject(string name,Transform transform)
     {
         GameObjectList.Add(new GameObject());
         GameObjectList.Last().Name = name;
-        GameObjectList.Last().Position = Position;
+        GameObjectList.Last().Transform = transform;
         return GameObjectList.Last();
     }
-    public static GameObject CreateGameObject(string name, Vector2 Position, float Angle)
+    public static GameObject CreateGameObject(string name, Vector2 Position, float Angle, float Scale)
     {
         GameObjectList.Add(new GameObject());
         GameObjectList.Last().Name = name;
-        GameObjectList.Last().Position = Position;
-        GameObjectList.Last().SetRotation(Angle);
+        GameObjectList.Last().Transform = new Transform(Position, Angle, Scale);
         return GameObjectList.Last();
     }
     public static void DeleteGameObject(GameObject Gobj)

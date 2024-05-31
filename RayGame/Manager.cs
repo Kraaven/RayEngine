@@ -6,17 +6,10 @@ namespace RayGame;
 public class Manager : IGameComponent
 {
     private static Manager instance;
+
     public static Manager Instance
     {
-        get
-        {
-            // If instance is null, create a new instance
-            if (instance == null)
-            {
-                instance = new Manager();
-            }
-            return instance;
-        }
+        get { if (instance == null) { instance = new Manager(); } return instance; }
     }
     public GameObject Container { get; set; }
     private bool spawnFlag;
@@ -38,22 +31,9 @@ public class Manager : IGameComponent
     
     public void Update()
     {
-        // if ((int)Engine.GameClock.Elapsed.TotalSeconds % 1.5f == 0)
-        // {
-        //     if (!spawnFlag)
-        //     {
-        //         SpawnObject();
-        //         spawnFlag = true;
-        //     }
-        // }
-        // else
-        // {
-        //     spawnFlag = false;
-        // }
-
-        if (Collider.CheckCollision(obj.ProcessVertices(obj.Vertices).ToArray(), obj2.ProcessVertices(obj2.Vertices).ToArray()))
+        if (obj.IsColliding(obj2))
         {
-            Console.WriteLine("Objects Collided");
+            Engine.DeleteGameObject(obj);
         }
     }
 

@@ -2,7 +2,7 @@
 
 namespace RayGame;
 
-public class Collider 
+public static class CollisionDetection 
 {
     
     public static bool CheckCollision(Vector2[] shape1, Vector2[] shape2)
