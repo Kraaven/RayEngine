@@ -1,7 +1,4 @@
-﻿using System.Numerics;
-using System.Runtime.Intrinsics.X86;
-
-namespace RayGame;
+﻿namespace RayGame.Components;
 
 public class Manager : IGameComponent
 {

@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Numerics;
 using RayGame;
+using RayGame.Components;
 using Raylib_cs;
 using Transform = RayGame.Transform;
 
