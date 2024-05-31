@@ -17,7 +17,10 @@ public class B2 : IGameComponent
         RotationSpeed = Engine.random.Next() % 5f;
         RotationSpeed += 1.2f;
         RotationSpeed = (int)RotationSpeed;
+        
     }
+
+
     
 
     public void Update()

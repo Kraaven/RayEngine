@@ -13,19 +13,14 @@ static class Engine
         
         Raylib.SetTargetFPS(60);
         Raylib.InitWindow(800,480,"Hello World");
-        // var obj = Program.CreateGameObject("Test", new Vector2(250,200));
-        // obj.AddVertices(new []{(50f,50f),(-50f,50f),(-50f,-50f),(50f,-50f)});
-        // GameObject test = new GameObject(new Vector2(200, 200),0);
-        // test.AddVertices(new []{(50f,50f),(-50f,50f),(-50f,-50f),(50f,-50f)}); 
-
+        
         var M = CreateGameObject("Manager");
         M.AddComponent<Manager>();
-        M.StartActions();
         GameClock.Start();
         
         foreach (var gameObject in GameObjectList)
         {
-            if (gameObject.Name != "Manager")
+            if (!gameObject.HasComponent<Manager>())
             {
                 gameObject.StartActions();
             }
@@ -52,7 +47,6 @@ static class Engine
         GameObjectList.Last().Name = name;
         return GameObjectList.Last();
     }
-    
     public static GameObject CreateGameObject(string name, Vector2 Position)
     {
         GameObjectList.Add(new GameObject());
@@ -60,14 +54,41 @@ static class Engine
         GameObjectList.Last().Position = Position;
         return GameObjectList.Last();
     }
-
     public static GameObject CreateGameObject(string name, Vector2 Position, float Angle)
     {
         GameObjectList.Add(new GameObject());
         GameObjectList.Last().Name = name;
         GameObjectList.Last().Position = Position;
-        GameObjectList.Last().Rotation = Angle;
+        GameObjectList.Last().SetRotation(Angle);
         return GameObjectList.Last();
     }
+    public static void DeleteGameObject(GameObject Gobj)
+    {
+        if (GameObjectList.Contains(Gobj))
+        {
+            Gobj.DeleteObjectComponents();
+            GameObjectList.Remove(Gobj);
+        }
+    }
+    public static GameObject FindObjectOfType<T>()
+    {
+        var Type = typeof(T).ToString();
+        Console.WriteLine(Type);
+        foreach (var gameObject in GameObjectList)
+        {
+            var types = gameObject.GetComponentNameList(false);
+            if (types.Contains(Type))
+            {
+                return gameObject;
+            }
+        }
+
+        return null;
+    }
+    public static GameObject FindObjectByName(string name)
+    {
+        return GameObjectList.FirstOrDefault(obj => obj.Name == name);
+    }
+
 
 }
