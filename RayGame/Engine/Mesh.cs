@@ -79,7 +79,24 @@ public class Mesh
         return Vertices.ToArray();
     }
 
+    public void DeleteVertex(int Index)
+    {
+        Vertices.RemoveAt(Index);
+    }
 
+    public void DeleteVertex((float, float) point)
+    {
+        var V = new Vector2(point.Item1, point.Item2);
+        if (Vertices.Contains(V))
+        {
+            Vertices.Remove(V);
+        }
+    }
+
+    public void InsertVertex(int Index, Vector2 Vertex)
+    {
+        Vertices.Insert(Index, Vertex);
+    }
 
 
 }
