@@ -1,10 +1,14 @@
-﻿using System.Numerics;
+﻿#region
+
+using System.Numerics;
+
+#endregion
 
 namespace RayGame;
 
 public interface IGameComponent
 {
-    public GameObject Container { get; set;}
+    public GameObject Container { get; set; }
 
     public void Start()
     {
@@ -14,12 +18,20 @@ public interface IGameComponent
     {
     }
 }
+
 public interface IRenderer
 {
     public GameObject Container { set; get; }
-    public void Start() { }
-    public void Update() { }
+
+    public void Start()
+    {
+    }
+
+    public void Update()
+    {
+    }
 }
+
 public class Transform
 {
     public Vector2 Position;
@@ -60,17 +72,19 @@ public class Transform
     {
         Rotation = MathF.PI * (Angle / 180);
     }
+
     public float GetRotation()
     {
         return Rotation;
     }
+
     public Vector2[] ApplyTransform(Vector2[] VertexArray)
     {
-        for (int i = 0; i < VertexArray.Length; i++)
+        for (var i = 0; i < VertexArray.Length; i++)
         {
             var x = MathF.Cos(Rotation) * VertexArray[i].X - MathF.Sin(Rotation) * VertexArray[i].Y;
             var y = MathF.Sin(Rotation) * VertexArray[i].X + MathF.Cos(Rotation) * VertexArray[i].Y;
-            Vector2 result = new Vector2(x, y);
+            var result = new Vector2(x, y);
             result *= Scale;
             result.X += Position.X;
             result.Y += Position.Y;
