@@ -37,22 +37,26 @@ public class Mesh
         Vertices.Add(new Vector2(vertex.Item1, vertex.Item2));
     }
     
-    public void ShiftMesh(Vector2 Offset)
+    public Mesh ShiftMesh(Vector2 Offset)
     {
         for (int i = 0; i < Vertices.Count; i++)
         {
             Vertices[i] += Offset;
         }
+
+        return this;
     }
-    public void ShiftMesh((float,float) Offset)
+    public Mesh ShiftMesh((float,float) Offset)
     {
         for (int i = 0; i < Vertices.Count; i++)
         {
             Vertices[i] += new Vector2(Offset.Item1, Offset.Item2);
 
         }
+
+        return this;
     }
-    public void RotateMesh(float Angle)
+    public Mesh RotateMesh(float Angle)
     {
         var Rotation = MathF.PI * (Angle / 180);
 
@@ -64,14 +68,17 @@ public class Mesh
             Vertices[i] = new Vector2(x, y);
         }
 
+        return this;
     }
-    public void ScaleMesh(float Scale)
+    public Mesh ScaleMesh(float Scale)
     {
         for (int i = 0; i < Vertices.Count; i++)
         {
             Vertices[i] *= Scale;
 
         }
+
+        return this;
     }
 
     public Vector2[] GetVertexArray()

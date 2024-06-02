@@ -10,16 +10,17 @@ static class Engine
 {
     public static List<GameObject> GameObjectList = new List<GameObject>();
     public static Random random = new Random();
-    public static Stopwatch GameClock = new Stopwatch();
+    private static double TIME { set;  get; }
+    public static long GAMETIME { private set; get; }
+
+    static int updateCount = 0;
     public static void Main()
     {
-        
         Raylib.SetTargetFPS(60);
         Raylib.InitWindow(800,480,"Hello World");
         
         var M = CreateGameObject("Manager");
         M.AddComponent<Manager>();
-        GameClock.Start();
         
         foreach (var gameObject in GameObjectList)
         {
@@ -30,10 +31,18 @@ static class Engine
         }
         while (!Raylib.WindowShouldClose())
         {
+            double deltaTime = Raylib.GetFrameTime();
+            TIME += deltaTime;
+            
+            if (TIME >= 0.01f)
+            {
+                updateCount++;
+                TIME -= 0.01f;
+                GAMETIME = (long)(TIME * 1000);
+            }
+            
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Color.White);
-            // test.RenderObject();
-            // test.Rotate(0.05f);
             foreach (var OBJECT in GameObjectList.ToArray())
             {
                 OBJECT.UpdateActions();
@@ -92,5 +101,25 @@ static class Engine
         return GameObjectList.FirstOrDefault(obj => obj.Name == name);
     }
 
+    private static void ADDTIME()
+    {
+        TIME++;
+    }
+
+    public static void EnableColliderRendering()
+    {
+        foreach (var gameObject in GameObjectList)
+        {
+            gameObject.DEBUGCOLIDERS = true;
+        }
+    }
+
+    public static void DisableColliderRendering()
+    {
+        foreach (var gameObject in GameObjectList)
+        {
+            gameObject.DEBUGCOLIDERS = false;
+        }
+    }
 
 }

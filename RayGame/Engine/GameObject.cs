@@ -9,6 +9,7 @@ public class GameObject
     public string Name;
     public Transform Transform = new Transform();
     private Guid ID = Guid.NewGuid();
+    public bool DEBUGCOLIDERS = false;
     
     private List<IGameComponent> ObjectComponents = new List<IGameComponent>();
     private List<IRenderer> ObjectRenderers = new List<IRenderer>();
@@ -30,15 +31,22 @@ public class GameObject
             gameComponent.Update();
         }
 
-        foreach (var renderer in ObjectRenderers)
+        if (DEBUGCOLIDERS)
         {
-            renderer.Update();
+            foreach (var collider in Colliders)
+            {
+                MeshRenderer.RenderMesh(Transform.ApplyTransform(collider.GetVertexArray()), Color.Green);
+            }
         }
-
-        // foreach (var collider in Colliders)
-        // {
-        //     MeshRenderer.RenderMesh(Transform.ApplyTransform(collider.GetVertexArray()), Color.Green);
-        // }
+        else
+        {
+            foreach (var renderer in ObjectRenderers)
+            {
+                renderer.Update();
+            }   
+        }
+        
+        
     }
 
     public bool IsColliding(GameObject Target)

@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using System.Reflection.Metadata.Ecma335;
 using Raylib_cs;
 
 namespace RayGame;
@@ -8,9 +9,15 @@ public class MeshRenderer : IRenderer
     public GameObject Container { get; set; }
     private Mesh mesh;
 
-    public void SetMesh(Mesh mesh)
+    public Mesh SetMesh(Mesh mesh)
     {
         this.mesh = mesh;
+        return mesh;
+    }
+
+    public Mesh GetMesh()
+    {
+        return mesh;
     }
 
     public void Start()

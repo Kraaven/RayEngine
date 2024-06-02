@@ -1,4 +1,6 @@
-﻿namespace RayGame.Components;
+﻿using System.Numerics;
+
+namespace RayGame.Components;
 
 public class Manager : IGameComponent
 {
@@ -10,33 +12,101 @@ public class Manager : IGameComponent
     }
     public GameObject Container { get; set; }
     private bool spawnFlag;
-
-    private GameObject obj;
-    private GameObject obj2;
+    public List<GameObject> PipeInstances = new List<GameObject>();
+    private GameObject passed;
+    private GameObject BIRD;
+    public bool Running;
+    
 
     public void Start()
     {
-        
-        obj =Engine.CreateGameObject("Entity");
-        obj.AddComponent<B2>();
-        
-        obj2 = Engine.CreateGameObject("Entity2");
-        obj2.AddComponent<B2>();
-        
-        
+        BIRD = Engine.CreateGameObject("bird");
+        BIRD.AddComponent<bird>();
+
+        Running = true;
     }
     
     public void Update()
     {
-        if (obj.IsColliding(obj2))
+        if (Engine.GAMETIME % 650 < 20)
         {
-            Engine.DeleteGameObject(obj);
+            if (!spawnFlag)
+            {
+                SpawnObject();
+                spawnFlag = true;
+                Console.WriteLine($"Objects in Scene: {Engine.GameObjectList.Count}");
+            }
         }
+        else
+        {
+            spawnFlag = false;
+        }
+    
+
+    
+        foreach (var pipeInstance in PipeInstances)
+        {
+            pipeInstance.Transform.Translate((-5f,0f));
+            if (pipeInstance.Transform.Position.X < -50)
+            {
+                passed = pipeInstance;
+            }
+        }
+
+        PipeInstances.Remove(passed);
+        Engine.DeleteGameObject(passed);
+        
+        foreach (var pipe in PipeInstances)
+        {
+            if (BIRD.IsColliding(pipe))
+            {
+                Running = false;
+            }
+        }
+
+        if (!Running)
+        {
+            RestartGame();
+        }
+            
+        
     }
 
-    // void SpawnObject()
-    // {
-    //     var obj =Engine.CreateGameObject("Entity");
-    //     obj.AddComponent<B2>();
-    // }
+    public void SpawnObject()
+    {
+        Mesh TopLip = new Mesh(new []{(-40f, 15f), (40f, 15f), (40f, -15f), (-40f, -15f)});
+        Mesh TopBody = new Mesh(new[] { (-25f, -15f), (25f, -15f), (25f, -450f), (-25f, -450f) });
+        
+        
+        var Pipes = Engine.CreateGameObject("Entity", new Transform(new Vector2(800,Engine.random.Next(60,300)),180,1));
+        Pipes.AddRenderer<MeshRenderer>().SetMesh(TopLip).ShiftMesh((0f,-150));
+        Pipes.AddRenderer<MeshRenderer>().SetMesh(TopBody).ShiftMesh((0f,-150));
+        Pipes.Colliders.Add(TopLip);
+        Pipes.Colliders.Add(TopBody);
+
+        Mesh BottomLip = new Mesh(TopLip.GetVertexArray());
+        Mesh BottomBody = new Mesh(TopBody.GetVertexArray());
+         var M3 = Pipes.AddRenderer<MeshRenderer>().SetMesh(new Mesh(BottomLip.GetVertexArray())).ShiftMesh((0f,150f)).RotateMesh(180);
+         var M4 =Pipes.AddRenderer<MeshRenderer>().SetMesh(new Mesh(BottomBody.GetVertexArray())).ShiftMesh((0f,150f)).RotateMesh(180);
+        Pipes.Colliders.Add(M3);
+        Pipes.Colliders.Add(M4);
+        
+        PipeInstances.Add(Pipes);
+    }
+
+    public void RestartGame()
+    {
+        foreach (var pipe in PipeInstances)
+        {
+            Engine.DeleteGameObject(pipe);
+        }
+        PipeInstances.Clear();
+            
+        Engine.DeleteGameObject(BIRD);
+        BIRD = null;
+            
+        Start();
+        Running = true;
+    }
+
 }
