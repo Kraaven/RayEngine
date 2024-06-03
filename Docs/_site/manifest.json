@@ -1,0 +1,218 @@
+{
+  "source_base_path": "C:/Users/dhruv/RiderProjects/RayGame/Docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RayGame.CollisionDetection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RayGame.CollisionDetection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RayGame.Demo.Demo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RayGame.Demo.Demo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RayGame.Demo.Manager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RayGame.Demo.Manager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RayGame.Demo.bird.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RayGame.Demo.bird.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RayGame.Demo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RayGame.Demo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RayGame.Engine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RayGame.Engine.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RayGame.GameObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RayGame.GameObject.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RayGame.IGameComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RayGame.IGameComponent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RayGame.IRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RayGame.IRenderer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RayGame.Mesh.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RayGame.Mesh.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RayGame.MeshRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RayGame.MeshRenderer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RayGame.Transform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RayGame.Transform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RayGame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RayGame.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

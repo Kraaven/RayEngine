@@ -1,0 +1,165 @@
+### YamlMime:ManagedReference
+items:
+- uid: RayGame.IGameComponent
+  commentId: T:RayGame.IGameComponent
+  id: IGameComponent
+  parent: RayGame
+  children:
+  - RayGame.IGameComponent.Container
+  - RayGame.IGameComponent.Start
+  - RayGame.IGameComponent.Update
+  langs:
+  - csharp
+  - vb
+  name: IGameComponent
+  nameWithType: IGameComponent
+  fullName: RayGame.IGameComponent
+  type: Interface
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: IGameComponent
+    path: ../RayGame/Bases.cs
+    startLine: 17
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Interface for game components.
+  remarks: >-
+    Implement this interface to create custom game components. Each <xref href="RayGame.GameObject" data-throw-if-not-resolved="false"></xref> has a List of Components that it runs by itself.
+
+    Hence, any class that implements <xref href="RayGame.IGameComponent" data-throw-if-not-resolved="false"></xref>, will be eligible to perform as a script attached to the Object.
+
+    By This, It is possible to create *Prefabs* buy creating 1 class component that adds all the required components and modifications.
+  example: []
+  syntax:
+    content: public interface IGameComponent
+    content.vb: Public Interface IGameComponent
+- uid: RayGame.IGameComponent.Container
+  commentId: P:RayGame.IGameComponent.Container
+  id: Container
+  parent: RayGame.IGameComponent
+  langs:
+  - csharp
+  - vb
+  name: Container
+  nameWithType: IGameComponent.Container
+  fullName: RayGame.IGameComponent.Container
+  type: Property
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: Container
+    path: ../RayGame/Bases.cs
+    startLine: 23
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: The container GameObject for this component.
+  example: []
+  syntax:
+    content: GameObject Container { get; set; }
+    parameters: []
+    return:
+      type: RayGame.GameObject
+    content.vb: Property Container As GameObject
+  overload: RayGame.IGameComponent.Container*
+- uid: RayGame.IGameComponent.Start
+  commentId: M:RayGame.IGameComponent.Start
+  id: Start
+  parent: RayGame.IGameComponent
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: IGameComponent.Start()
+  fullName: RayGame.IGameComponent.Start()
+  type: Method
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: Start
+    path: ../RayGame/Bases.cs
+    startLine: 28
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Called when the component is Added.
+  example: []
+  syntax:
+    content: void Start()
+    content.vb: Sub Start()
+  overload: RayGame.IGameComponent.Start*
+- uid: RayGame.IGameComponent.Update
+  commentId: M:RayGame.IGameComponent.Update
+  id: Update
+  parent: RayGame.IGameComponent
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: IGameComponent.Update()
+  fullName: RayGame.IGameComponent.Update()
+  type: Method
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: Update
+    path: ../RayGame/Bases.cs
+    startLine: 35
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Called every frame to update the component.
+  example: []
+  syntax:
+    content: void Update()
+    content.vb: Sub Update()
+  overload: RayGame.IGameComponent.Update*
+references:
+- uid: RayGame.GameObject
+  commentId: T:RayGame.GameObject
+  parent: RayGame
+  href: RayGame.GameObject.html
+  name: GameObject
+  nameWithType: GameObject
+  fullName: RayGame.GameObject
+- uid: RayGame.IGameComponent
+  commentId: T:RayGame.IGameComponent
+  parent: RayGame
+  href: RayGame.IGameComponent.html
+  name: IGameComponent
+  nameWithType: IGameComponent
+  fullName: RayGame.IGameComponent
+- uid: RayGame
+  commentId: N:RayGame
+  href: RayGame.html
+  name: RayGame
+  nameWithType: RayGame
+  fullName: RayGame
+- uid: RayGame.IGameComponent.Container*
+  commentId: Overload:RayGame.IGameComponent.Container
+  href: RayGame.IGameComponent.html#RayGame_IGameComponent_Container
+  name: Container
+  nameWithType: IGameComponent.Container
+  fullName: RayGame.IGameComponent.Container
+- uid: RayGame.IGameComponent.Start*
+  commentId: Overload:RayGame.IGameComponent.Start
+  href: RayGame.IGameComponent.html#RayGame_IGameComponent_Start
+  name: Start
+  nameWithType: IGameComponent.Start
+  fullName: RayGame.IGameComponent.Start
+- uid: RayGame.IGameComponent.Update*
+  commentId: Overload:RayGame.IGameComponent.Update
+  href: RayGame.IGameComponent.html#RayGame_IGameComponent_Update
+  name: Update
+  nameWithType: IGameComponent.Update
+  fullName: RayGame.IGameComponent.Update

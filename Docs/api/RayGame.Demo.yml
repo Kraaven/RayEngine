@@ -1,0 +1,60 @@
+### YamlMime:ManagedReference
+items:
+- uid: RayGame.Demo
+  commentId: N:RayGame.Demo
+  id: RayGame.Demo
+  children:
+  - RayGame.Demo.Bird
+  - RayGame.Demo.Demo
+  - RayGame.Demo.Manager
+  langs:
+  - csharp
+  - vb
+  name: RayGame.Demo
+  nameWithType: RayGame.Demo
+  fullName: RayGame.Demo
+  type: Namespace
+  assemblies:
+  - RayGame
+references:
+- uid: RayGame.Demo.Bird
+  commentId: T:RayGame.Demo.Bird
+  href: RayGame.Demo.Bird.html
+  name: Bird
+  nameWithType: Bird
+  fullName: RayGame.Demo.Bird
+- uid: RayGame.Demo.Demo
+  commentId: T:RayGame.Demo.Demo
+  href: RayGame.Demo.Demo.html
+  name: Demo
+  nameWithType: Demo
+  fullName: RayGame.Demo.Demo
+- uid: RayGame.Demo.Manager
+  commentId: T:RayGame.Demo.Manager
+  parent: RayGame.Demo
+  href: RayGame.Demo.Manager.html
+  name: Manager
+  nameWithType: Manager
+  fullName: RayGame.Demo.Manager
+- uid: RayGame.Demo
+  commentId: N:RayGame.Demo
+  href: RayGame.html
+  name: RayGame.Demo
+  nameWithType: RayGame.Demo
+  fullName: RayGame.Demo
+  spec.csharp:
+  - uid: RayGame
+    name: RayGame
+    href: RayGame.html
+  - name: .
+  - uid: RayGame.Demo
+    name: Demo
+    href: RayGame.Demo.html
+  spec.vb:
+  - uid: RayGame
+    name: RayGame
+    href: RayGame.html
+  - name: .
+  - uid: RayGame.Demo
+    name: Demo
+    href: RayGame.Demo.html

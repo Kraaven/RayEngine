@@ -33,7 +33,7 @@ public class Manager : IGameComponent
     public void Start()
     {
         BIRD = Engine.CreateGameObject("bird");
-        BIRD.AddComponent<bird>();
+        BIRD.AddComponent<Bird>();
 
         Running = true;
     }
@@ -46,7 +46,7 @@ public class Manager : IGameComponent
             {
                 SpawnObject();
                 spawnFlag = true;
-                Console.WriteLine($"Objects in Scene: {Engine.GameObjectList.Count}");
+                Console.WriteLine($"Objects in Scene: {Engine.GetGameObjectCount()}");
             }
         }
         else

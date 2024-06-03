@@ -1,0 +1,159 @@
+### YamlMime:ManagedReference
+items:
+- uid: RayGame.IRenderer
+  commentId: T:RayGame.IRenderer
+  id: IRenderer
+  parent: RayGame
+  children:
+  - RayGame.IRenderer.Container
+  - RayGame.IRenderer.Start
+  - RayGame.IRenderer.Update
+  langs:
+  - csharp
+  - vb
+  name: IRenderer
+  nameWithType: IRenderer
+  fullName: RayGame.IRenderer
+  type: Interface
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: IRenderer
+    path: ../RayGame/Bases.cs
+    startLine: 47
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Interface for renderers.
+  remarks: >-
+    This is interface is to be inherited by all Renderers, If you wish to make a custom renderer, then u can,
+
+    but i would recommend sticking to the provided renderers. **Primarily for internal use**
+  example: []
+  syntax:
+    content: public interface IRenderer
+    content.vb: Public Interface IRenderer
+- uid: RayGame.IRenderer.Container
+  commentId: P:RayGame.IRenderer.Container
+  id: Container
+  parent: RayGame.IRenderer
+  langs:
+  - csharp
+  - vb
+  name: Container
+  nameWithType: IRenderer.Container
+  fullName: RayGame.IRenderer.Container
+  type: Property
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: Container
+    path: ../RayGame/Bases.cs
+    startLine: 53
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: >-
+    The container GameObject for this renderer.
+
+    Any Actions that want to be performed to it, is does through this reference.
+  example: []
+  syntax:
+    content: GameObject Container { get; set; }
+    parameters: []
+    return:
+      type: RayGame.GameObject
+    content.vb: Property Container As GameObject
+  overload: RayGame.IRenderer.Container*
+- uid: RayGame.IRenderer.Start
+  commentId: M:RayGame.IRenderer.Start
+  id: Start
+  parent: RayGame.IRenderer
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: IRenderer.Start()
+  fullName: RayGame.IRenderer.Start()
+  type: Method
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: Start
+    path: ../RayGame/Bases.cs
+    startLine: 58
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: The Function Called when the Renderer is Added to an Object.
+  example: []
+  syntax:
+    content: void Start()
+    content.vb: Sub Start()
+  overload: RayGame.IRenderer.Start*
+- uid: RayGame.IRenderer.Update
+  commentId: M:RayGame.IRenderer.Update
+  id: Update
+  parent: RayGame.IRenderer
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: IRenderer.Update()
+  fullName: RayGame.IRenderer.Update()
+  type: Method
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: Update
+    path: ../RayGame/Bases.cs
+    startLine: 65
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Called every frame to update the renderer. Primarily holds code to render the content.
+  example: []
+  syntax:
+    content: void Update()
+    content.vb: Sub Update()
+  overload: RayGame.IRenderer.Update*
+references:
+- uid: RayGame
+  commentId: N:RayGame
+  href: RayGame.html
+  name: RayGame
+  nameWithType: RayGame
+  fullName: RayGame
+- uid: RayGame.IRenderer.Container*
+  commentId: Overload:RayGame.IRenderer.Container
+  href: RayGame.IRenderer.html#RayGame_IRenderer_Container
+  name: Container
+  nameWithType: IRenderer.Container
+  fullName: RayGame.IRenderer.Container
+- uid: RayGame.GameObject
+  commentId: T:RayGame.GameObject
+  parent: RayGame
+  href: RayGame.GameObject.html
+  name: GameObject
+  nameWithType: GameObject
+  fullName: RayGame.GameObject
+- uid: RayGame.IRenderer.Start*
+  commentId: Overload:RayGame.IRenderer.Start
+  href: RayGame.IRenderer.html#RayGame_IRenderer_Start
+  name: Start
+  nameWithType: IRenderer.Start
+  fullName: RayGame.IRenderer.Start
+- uid: RayGame.IRenderer.Update*
+  commentId: Overload:RayGame.IRenderer.Update
+  href: RayGame.IRenderer.html#RayGame_IRenderer_Update
+  name: Update
+  nameWithType: IRenderer.Update
+  fullName: RayGame.IRenderer.Update

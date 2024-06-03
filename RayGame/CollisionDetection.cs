@@ -6,8 +6,20 @@ using System.Numerics;
 
 namespace RayGame;
 
+/// <summary>
+/// Provides a method for collision detection between shapes.
+/// </summary>
+/// <remarks>
+/// This is a Static class used internally to check the collision between Colliders in <see cref="GameObject"/>s.**Primarily for internal use**
+/// </remarks>>
 public static class CollisionDetection
 {
+    /// <summary>
+    /// Checks if two shapes are colliding.
+    /// </summary>
+    /// <param name="shape1">The first shape.</param>
+    /// <param name="shape2">The second shape.</param>
+    /// <returns>True if the shapes are colliding, otherwise false.</returns>
     public static bool CheckCollision(Vector2[] shape1, Vector2[] shape2)
     {
         return IsColliding(shape1, shape2) && IsColliding(shape2, shape1);

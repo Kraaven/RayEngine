@@ -1,0 +1,833 @@
+### YamlMime:ManagedReference
+items:
+- uid: RayGame.Transform
+  commentId: T:RayGame.Transform
+  id: Transform
+  parent: RayGame
+  children:
+  - RayGame.Transform.#ctor
+  - RayGame.Transform.#ctor(System.Numerics.Vector2,System.Single,System.Single)
+  - RayGame.Transform.ApplyTransform(System.Numerics.Vector2[])
+  - RayGame.Transform.GetRotation
+  - RayGame.Transform.Position
+  - RayGame.Transform.Rotate(System.Single)
+  - RayGame.Transform.Scale
+  - RayGame.Transform.SetRotation(System.Single)
+  - RayGame.Transform.Translate(System.Numerics.Vector2)
+  - RayGame.Transform.Translate(System.ValueTuple{System.Single,System.Single})
+  langs:
+  - csharp
+  - vb
+  name: Transform
+  nameWithType: Transform
+  fullName: RayGame.Transform
+  type: Class
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: Transform
+    path: ../RayGame/Bases.cs
+    startLine: 78
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: The class that holds all the transformation data for an object
+  remarks: >-
+    A Class that is used to represent the Position, Rotation and Scale of an object.
+
+    This class super-imposes its properties onto vertices per frame, which means that any object containing this class can enact global transformations within that <xref href="RayGame.GameObject" data-throw-if-not-resolved="false"></xref>.
+
+    By default, any transformations does on the object should be done through its Transform.
+  example: []
+  syntax:
+    content: public class Transform
+    content.vb: Public Class Transform
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: RayGame.Transform.Position
+  commentId: F:RayGame.Transform.Position
+  id: Position
+  parent: RayGame.Transform
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: Transform.Position
+  fullName: RayGame.Transform.Position
+  type: Field
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: Position
+    path: ../RayGame/Bases.cs
+    startLine: 83
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: The position of the transform as a <xref href="System.Numerics.Vector2" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public Vector2 Position
+    return:
+      type: System.Numerics.Vector2
+    content.vb: Public Position As Vector2
+- uid: RayGame.Transform.Scale
+  commentId: F:RayGame.Transform.Scale
+  id: Scale
+  parent: RayGame.Transform
+  langs:
+  - csharp
+  - vb
+  name: Scale
+  nameWithType: Transform.Scale
+  fullName: RayGame.Transform.Scale
+  type: Field
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: Scale
+    path: ../RayGame/Bases.cs
+    startLine: 91
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: The Scale of the transform as a Float.
+  example: []
+  syntax:
+    content: public float Scale
+    return:
+      type: System.Single
+    content.vb: Public Scale As Single
+- uid: RayGame.Transform.#ctor(System.Numerics.Vector2,System.Single,System.Single)
+  commentId: M:RayGame.Transform.#ctor(System.Numerics.Vector2,System.Single,System.Single)
+  id: '#ctor(System.Numerics.Vector2,System.Single,System.Single)'
+  parent: RayGame.Transform
+  langs:
+  - csharp
+  - vb
+  name: Transform(Vector2, float, float)
+  nameWithType: Transform.Transform(Vector2, float, float)
+  fullName: RayGame.Transform.Transform(System.Numerics.Vector2, float, float)
+  type: Constructor
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: .ctor
+    path: ../RayGame/Bases.cs
+    startLine: 99
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Initializes a new instance of the <xref href="RayGame.Transform" data-throw-if-not-resolved="false"></xref> class with specified position, rotation, and scale.
+  example: []
+  syntax:
+    content: public Transform(Vector2 pos, float ang, float sc)
+    parameters:
+    - id: pos
+      type: System.Numerics.Vector2
+      description: The position of the transform.
+    - id: ang
+      type: System.Single
+      description: The rotation of the transform in degrees.
+    - id: sc
+      type: System.Single
+      description: The scale of the transform.
+    content.vb: Public Sub New(pos As Vector2, ang As Single, sc As Single)
+  overload: RayGame.Transform.#ctor*
+  nameWithType.vb: Transform.New(Vector2, Single, Single)
+  fullName.vb: RayGame.Transform.New(System.Numerics.Vector2, Single, Single)
+  name.vb: New(Vector2, Single, Single)
+- uid: RayGame.Transform.#ctor
+  commentId: M:RayGame.Transform.#ctor
+  id: '#ctor'
+  parent: RayGame.Transform
+  langs:
+  - csharp
+  - vb
+  name: Transform()
+  nameWithType: Transform.Transform()
+  fullName: RayGame.Transform.Transform()
+  type: Constructor
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: .ctor
+    path: ../RayGame/Bases.cs
+    startLine: 110
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: >-
+    Initializes a new instance of the <xref href="RayGame.Transform" data-throw-if-not-resolved="false"></xref> class with default values.
+
+    Position being (0,0). Rotation being 0. Scale being 1.
+  example: []
+  syntax:
+    content: public Transform()
+    content.vb: Public Sub New()
+  overload: RayGame.Transform.#ctor*
+  nameWithType.vb: Transform.New()
+  fullName.vb: RayGame.Transform.New()
+  name.vb: New()
+- uid: RayGame.Transform.Rotate(System.Single)
+  commentId: M:RayGame.Transform.Rotate(System.Single)
+  id: Rotate(System.Single)
+  parent: RayGame.Transform
+  langs:
+  - csharp
+  - vb
+  name: Rotate(float)
+  nameWithType: Transform.Rotate(float)
+  fullName: RayGame.Transform.Rotate(float)
+  type: Method
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: Rotate
+    path: ../RayGame/Bases.cs
+    startLine: 122
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: >-
+    Rotates the transform by the specified angle.
+
+    Takes an Angle in degrees, and stores them internally as radians.
+  example: []
+  syntax:
+    content: public void Rotate(float Angle)
+    parameters:
+    - id: Angle
+      type: System.Single
+      description: The angle in degrees.
+    content.vb: Public Sub Rotate(Angle As Single)
+  overload: RayGame.Transform.Rotate*
+  nameWithType.vb: Transform.Rotate(Single)
+  fullName.vb: RayGame.Transform.Rotate(Single)
+  name.vb: Rotate(Single)
+- uid: RayGame.Transform.Translate(System.ValueTuple{System.Single,System.Single})
+  commentId: M:RayGame.Transform.Translate(System.ValueTuple{System.Single,System.Single})
+  id: Translate(System.ValueTuple{System.Single,System.Single})
+  parent: RayGame.Transform
+  langs:
+  - csharp
+  - vb
+  name: Translate((float, float))
+  nameWithType: Transform.Translate((float, float))
+  fullName: RayGame.Transform.Translate((float, float))
+  type: Method
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: Translate
+    path: ../RayGame/Bases.cs
+    startLine: 131
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Translates the transform by the specified offset.
+  example: []
+  syntax:
+    content: public void Translate((float, float) Offset)
+    parameters:
+    - id: Offset
+      type: System.ValueTuple{System.Single,System.Single}
+      description: The offset as a tuple(<xref href="System.Single" data-throw-if-not-resolved="false"></xref>, <xref href="System.Single" data-throw-if-not-resolved="false"></xref>)
+    content.vb: Public Sub Translate(Offset As (Single, Single))
+  overload: RayGame.Transform.Translate*
+  nameWithType.vb: Transform.Translate((Single, Single))
+  fullName.vb: RayGame.Transform.Translate((Single, Single))
+  name.vb: Translate((Single, Single))
+- uid: RayGame.Transform.Translate(System.Numerics.Vector2)
+  commentId: M:RayGame.Transform.Translate(System.Numerics.Vector2)
+  id: Translate(System.Numerics.Vector2)
+  parent: RayGame.Transform
+  langs:
+  - csharp
+  - vb
+  name: Translate(Vector2)
+  nameWithType: Transform.Translate(Vector2)
+  fullName: RayGame.Transform.Translate(System.Numerics.Vector2)
+  type: Method
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: Translate
+    path: ../RayGame/Bases.cs
+    startLine: 141
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Translates the transform by the specified offset.
+  example: []
+  syntax:
+    content: public void Translate(Vector2 Offset)
+    parameters:
+    - id: Offset
+      type: System.Numerics.Vector2
+      description: The offset as a <xref href="System.Numerics.Vector2" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub Translate(Offset As Vector2)
+  overload: RayGame.Transform.Translate*
+- uid: RayGame.Transform.SetRotation(System.Single)
+  commentId: M:RayGame.Transform.SetRotation(System.Single)
+  id: SetRotation(System.Single)
+  parent: RayGame.Transform
+  langs:
+  - csharp
+  - vb
+  name: SetRotation(float)
+  nameWithType: Transform.SetRotation(float)
+  fullName: RayGame.Transform.SetRotation(float)
+  type: Method
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: SetRotation
+    path: ../RayGame/Bases.cs
+    startLine: 151
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: >-
+    Sets the rotation of the transform to the specified angle.
+
+    Takes an Angle in degrees, and stores them internally as radians.
+  example: []
+  syntax:
+    content: public void SetRotation(float Angle)
+    parameters:
+    - id: Angle
+      type: System.Single
+      description: The angle in degrees.
+    content.vb: Public Sub SetRotation(Angle As Single)
+  overload: RayGame.Transform.SetRotation*
+  nameWithType.vb: Transform.SetRotation(Single)
+  fullName.vb: RayGame.Transform.SetRotation(Single)
+  name.vb: SetRotation(Single)
+- uid: RayGame.Transform.GetRotation
+  commentId: M:RayGame.Transform.GetRotation
+  id: GetRotation
+  parent: RayGame.Transform
+  langs:
+  - csharp
+  - vb
+  name: GetRotation()
+  nameWithType: Transform.GetRotation()
+  fullName: RayGame.Transform.GetRotation()
+  type: Method
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: GetRotation
+    path: ../RayGame/Bases.cs
+    startLine: 163
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Gets the rotation of the transform.
+  example: []
+  syntax:
+    content: public float GetRotation()
+    return:
+      type: System.Single
+      description: The rotation in returned as Degrees.
+    content.vb: Public Function GetRotation() As Single
+  overload: RayGame.Transform.GetRotation*
+- uid: RayGame.Transform.ApplyTransform(System.Numerics.Vector2[])
+  commentId: M:RayGame.Transform.ApplyTransform(System.Numerics.Vector2[])
+  id: ApplyTransform(System.Numerics.Vector2[])
+  parent: RayGame.Transform
+  langs:
+  - csharp
+  - vb
+  name: ApplyTransform(Vector2[])
+  nameWithType: Transform.ApplyTransform(Vector2[])
+  fullName: RayGame.Transform.ApplyTransform(System.Numerics.Vector2[])
+  type: Method
+  source:
+    remote:
+      path: RayGame/Bases.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: ApplyTransform
+    path: ../RayGame/Bases.cs
+    startLine: 174
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: >-
+    Applies the transform to an array of vertices.
+
+    Applies that transforms onto the Vertices of a <xref href="RayGame.Mesh" data-throw-if-not-resolved="false"></xref>'s Vertex Array. Primarily used internally in the Engine.
+  example: []
+  syntax:
+    content: public Vector2[] ApplyTransform(Vector2[] VertexArray)
+    parameters:
+    - id: VertexArray
+      type: System.Numerics.Vector2[]
+      description: The array of vertices to transform.
+    return:
+      type: System.Numerics.Vector2[]
+      description: The transformed array of vertices.
+    content.vb: Public Function ApplyTransform(VertexArray As Vector2()) As Vector2()
+  overload: RayGame.Transform.ApplyTransform*
+  nameWithType.vb: Transform.ApplyTransform(Vector2())
+  fullName.vb: RayGame.Transform.ApplyTransform(System.Numerics.Vector2())
+  name.vb: ApplyTransform(Vector2())
+references:
+- uid: RayGame.GameObject
+  commentId: T:RayGame.GameObject
+  parent: RayGame
+  href: RayGame.GameObject.html
+  name: GameObject
+  nameWithType: GameObject
+  fullName: RayGame.GameObject
+- uid: RayGame
+  commentId: N:RayGame
+  href: RayGame.html
+  name: RayGame
+  nameWithType: RayGame
+  fullName: RayGame
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Numerics.Vector2
+  commentId: T:System.Numerics.Vector2
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.vector2
+  name: Vector2
+  nameWithType: Vector2
+  fullName: System.Numerics.Vector2
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: RayGame.Transform
+  commentId: T:RayGame.Transform
+  parent: RayGame
+  href: RayGame.Transform.html
+  name: Transform
+  nameWithType: Transform
+  fullName: RayGame.Transform
+- uid: RayGame.Transform.#ctor*
+  commentId: Overload:RayGame.Transform.#ctor
+  href: RayGame.Transform.html#RayGame_Transform__ctor_System_Numerics_Vector2_System_Single_System_Single_
+  name: Transform
+  nameWithType: Transform.Transform
+  fullName: RayGame.Transform.Transform
+  nameWithType.vb: Transform.New
+  fullName.vb: RayGame.Transform.New
+  name.vb: New
+- uid: RayGame.Transform.Rotate*
+  commentId: Overload:RayGame.Transform.Rotate
+  href: RayGame.Transform.html#RayGame_Transform_Rotate_System_Single_
+  name: Rotate
+  nameWithType: Transform.Rotate
+  fullName: RayGame.Transform.Rotate
+- uid: RayGame.Transform.Translate*
+  commentId: Overload:RayGame.Transform.Translate
+  href: RayGame.Transform.html#RayGame_Transform_Translate_System_ValueTuple_System_Single_System_Single__
+  name: Translate
+  nameWithType: Transform.Translate
+  fullName: RayGame.Transform.Translate
+- uid: System.ValueTuple{System.Single,System.Single}
+  commentId: T:System.ValueTuple{System.Single,System.Single}
+  parent: System
+  definition: System.ValueTuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: (float, float)
+  nameWithType: (float, float)
+  fullName: (float, float)
+  nameWithType.vb: (Single, Single)
+  fullName.vb: (Single, Single)
+  name.vb: (Single, Single)
+  spec.csharp:
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  name: (T1, T2)
+  nameWithType: (T1, T2)
+  fullName: (T1, T2)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: RayGame.Transform.SetRotation*
+  commentId: Overload:RayGame.Transform.SetRotation
+  href: RayGame.Transform.html#RayGame_Transform_SetRotation_System_Single_
+  name: SetRotation
+  nameWithType: Transform.SetRotation
+  fullName: RayGame.Transform.SetRotation
+- uid: RayGame.Transform.GetRotation*
+  commentId: Overload:RayGame.Transform.GetRotation
+  href: RayGame.Transform.html#RayGame_Transform_GetRotation
+  name: GetRotation
+  nameWithType: Transform.GetRotation
+  fullName: RayGame.Transform.GetRotation
+- uid: RayGame.Mesh
+  commentId: T:RayGame.Mesh
+  parent: RayGame
+  href: RayGame.Mesh.html
+  name: Mesh
+  nameWithType: Mesh
+  fullName: RayGame.Mesh
+- uid: RayGame.Transform.ApplyTransform*
+  commentId: Overload:RayGame.Transform.ApplyTransform
+  href: RayGame.Transform.html#RayGame_Transform_ApplyTransform_System_Numerics_Vector2___
+  name: ApplyTransform
+  nameWithType: Transform.ApplyTransform
+  fullName: RayGame.Transform.ApplyTransform
+- uid: System.Numerics.Vector2[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.vector2
+  name: Vector2[]
+  nameWithType: Vector2[]
+  fullName: System.Numerics.Vector2[]
+  nameWithType.vb: Vector2()
+  fullName.vb: System.Numerics.Vector2()
+  name.vb: Vector2()
+  spec.csharp:
+  - uid: System.Numerics.Vector2
+    name: Vector2
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector2
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Numerics.Vector2
+    name: Vector2
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector2
+  - name: (
+  - name: )

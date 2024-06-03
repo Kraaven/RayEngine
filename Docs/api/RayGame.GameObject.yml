@@ -1,0 +1,1376 @@
+### YamlMime:ManagedReference
+items:
+- uid: RayGame.GameObject
+  commentId: T:RayGame.GameObject
+  id: GameObject
+  parent: RayGame
+  children:
+  - RayGame.GameObject.AddComponent``1
+  - RayGame.GameObject.AddRenderer``1
+  - RayGame.GameObject.Colliders
+  - RayGame.GameObject.DEBUGCOLIDERS
+  - RayGame.GameObject.DeleteAllRenderers
+  - RayGame.GameObject.DeleteComponent``1
+  - RayGame.GameObject.DeleteObjectComponents
+  - RayGame.GameObject.DeleteRenderer``1(System.Int32)
+  - RayGame.GameObject.GetComponentNameList(System.Boolean)
+  - RayGame.GameObject.GetComponent``1
+  - RayGame.GameObject.GetRendererNameList(System.Boolean)
+  - RayGame.GameObject.GetRenderer``1(System.Int32)
+  - RayGame.GameObject.HasComponent``1
+  - RayGame.GameObject.HasRenderer``1
+  - RayGame.GameObject.IsColliding(RayGame.GameObject)
+  - RayGame.GameObject.Name
+  - RayGame.GameObject.SetTransform(RayGame.Transform)
+  - RayGame.GameObject.ShiftComponent``1(System.Int32)
+  - RayGame.GameObject.ShiftRenderer``1(System.Int32)
+  - RayGame.GameObject.StartActions
+  - RayGame.GameObject.Transform
+  - RayGame.GameObject.UpdateActions
+  langs:
+  - csharp
+  - vb
+  name: GameObject
+  nameWithType: GameObject
+  fullName: RayGame.GameObject
+  type: Class
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: GameObject
+    path: ../RayGame/GameObject.cs
+    startLine: 14
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Represents a game object in the Scene.
+  remarks: The GameObjects are the building blocks of your scene. They contain a few fields that allow for adding logic and properties to make them functional.
+  example: []
+  syntax:
+    content: public class GameObject
+    content.vb: Public Class GameObject
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: RayGame.GameObject.Colliders
+  commentId: F:RayGame.GameObject.Colliders
+  id: Colliders
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: Colliders
+  nameWithType: GameObject.Colliders
+  fullName: RayGame.GameObject.Colliders
+  type: Field
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: Colliders
+    path: ../RayGame/GameObject.cs
+    startLine: 22
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: The List of Colliders attached to the GameObject. They are represented as a List of <xref href="RayGame.Mesh" data-throw-if-not-resolved="false"></xref>'s. You can add Colliders directly.
+  example: []
+  syntax:
+    content: public List<Mesh> Colliders
+    return:
+      type: System.Collections.Generic.List{RayGame.Mesh}
+    content.vb: Public Colliders As List(Of Mesh)
+- uid: RayGame.GameObject.DEBUGCOLIDERS
+  commentId: F:RayGame.GameObject.DEBUGCOLIDERS
+  id: DEBUGCOLIDERS
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: DEBUGCOLIDERS
+  nameWithType: GameObject.DEBUGCOLIDERS
+  fullName: RayGame.GameObject.DEBUGCOLIDERS
+  type: Field
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: DEBUGCOLIDERS
+    path: ../RayGame/GameObject.cs
+    startLine: 27
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: >-
+    This is a property of the GameObject that determines what is to be rendered. If *false*, all the <xref href="RayGame.IRenderer" data-throw-if-not-resolved="false"></xref>'s Update Method will be fired per frame.
+
+    If *true*, then instead of the <xref href="RayGame.IRenderer" data-throw-if-not-resolved="false"></xref>'s, the Colliders attached to your GameObject will be rendered. This is for debugging purposes.
+  example: []
+  syntax:
+    content: public bool DEBUGCOLIDERS
+    return:
+      type: System.Boolean
+    content.vb: Public DEBUGCOLIDERS As Boolean
+- uid: RayGame.GameObject.Name
+  commentId: F:RayGame.GameObject.Name
+  id: Name
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: GameObject.Name
+  fullName: RayGame.GameObject.Name
+  type: Field
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: Name
+    path: ../RayGame/GameObject.cs
+    startLine: 35
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: This is the Name Associated with the GameObject
+  example: []
+  syntax:
+    content: public string Name
+    return:
+      type: System.String
+    content.vb: Public Name As String
+- uid: RayGame.GameObject.Transform
+  commentId: F:RayGame.GameObject.Transform
+  id: Transform
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: Transform
+  nameWithType: GameObject.Transform
+  fullName: RayGame.GameObject.Transform
+  type: Field
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: Transform
+    path: ../RayGame/GameObject.cs
+    startLine: 39
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: This is the <xref href="RayGame.GameObject.Transform" data-throw-if-not-resolved="false"></xref> attached to the GameObject.
+  example: []
+  syntax:
+    content: public Transform Transform
+    return:
+      type: RayGame.Transform
+    content.vb: Public Transform As Transform
+- uid: RayGame.GameObject.StartActions
+  commentId: M:RayGame.GameObject.StartActions
+  id: StartActions
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: StartActions()
+  nameWithType: GameObject.StartActions()
+  fullName: RayGame.GameObject.StartActions()
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: StartActions
+    path: ../RayGame/GameObject.cs
+    startLine: 46
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: The function that is called when the GameObject is Initiated. Not used in most cases. **Primarily for internal use**
+  example: []
+  syntax:
+    content: public void StartActions()
+    content.vb: Public Sub StartActions()
+  overload: RayGame.GameObject.StartActions*
+- uid: RayGame.GameObject.UpdateActions
+  commentId: M:RayGame.GameObject.UpdateActions
+  id: UpdateActions
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: UpdateActions()
+  nameWithType: GameObject.UpdateActions()
+  fullName: RayGame.GameObject.UpdateActions()
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: UpdateActions
+    path: ../RayGame/GameObject.cs
+    startLine: 54
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: This is the function that calls to update the state of the GameObject per frame.**Primarily for internal use**
+  example: []
+  syntax:
+    content: public void UpdateActions()
+    content.vb: Public Sub UpdateActions()
+  overload: RayGame.GameObject.UpdateActions*
+- uid: RayGame.GameObject.IsColliding(RayGame.GameObject)
+  commentId: M:RayGame.GameObject.IsColliding(RayGame.GameObject)
+  id: IsColliding(RayGame.GameObject)
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: IsColliding(GameObject)
+  nameWithType: GameObject.IsColliding(GameObject)
+  fullName: RayGame.GameObject.IsColliding(RayGame.GameObject)
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: IsColliding
+    path: ../RayGame/GameObject.cs
+    startLine: 71
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Checks if this game object is colliding with the specified target game object.
+  example: []
+  syntax:
+    content: public bool IsColliding(GameObject Target)
+    parameters:
+    - id: Target
+      type: RayGame.GameObject
+      description: The target game object to check for collisions with.
+    return:
+      type: System.Boolean
+      description: True if a collision is detected, otherwise false.
+    content.vb: Public Function IsColliding(Target As GameObject) As Boolean
+  overload: RayGame.GameObject.IsColliding*
+- uid: RayGame.GameObject.SetTransform(RayGame.Transform)
+  commentId: M:RayGame.GameObject.SetTransform(RayGame.Transform)
+  id: SetTransform(RayGame.Transform)
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: SetTransform(Transform)
+  nameWithType: GameObject.SetTransform(Transform)
+  fullName: RayGame.GameObject.SetTransform(RayGame.Transform)
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: SetTransform
+    path: ../RayGame/GameObject.cs
+    startLine: 91
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Sets the transform of this game object to the specified new transform.
+  example: []
+  syntax:
+    content: public void SetTransform(Transform newTransform)
+    parameters:
+    - id: newTransform
+      type: RayGame.Transform
+      description: The new transform to set.
+    content.vb: Public Sub SetTransform(newTransform As Transform)
+  overload: RayGame.GameObject.SetTransform*
+- uid: RayGame.GameObject.AddComponent``1
+  commentId: M:RayGame.GameObject.AddComponent``1
+  id: AddComponent``1
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: AddComponent<T>()
+  nameWithType: GameObject.AddComponent<T>()
+  fullName: RayGame.GameObject.AddComponent<T>()
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: AddComponent
+    path: ../RayGame/GameObject.cs
+    startLine: 103
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Adds a component of the specified type to this game object.
+  example: []
+  syntax:
+    content: 'public T AddComponent<T>() where T : IGameComponent, new()'
+    typeParameters:
+    - id: T
+      description: The type of component to add.
+    return:
+      type: '{T}'
+      description: The added component.
+    content.vb: Public Function AddComponent(Of T As {IGameComponent, New})() As T
+  overload: RayGame.GameObject.AddComponent*
+  nameWithType.vb: GameObject.AddComponent(Of T)()
+  fullName.vb: RayGame.GameObject.AddComponent(Of T)()
+  name.vb: AddComponent(Of T)()
+- uid: RayGame.GameObject.GetComponent``1
+  commentId: M:RayGame.GameObject.GetComponent``1
+  id: GetComponent``1
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: GetComponent<T>()
+  nameWithType: GameObject.GetComponent<T>()
+  fullName: RayGame.GameObject.GetComponent<T>()
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: GetComponent
+    path: ../RayGame/GameObject.cs
+    startLine: 120
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Gets the first component of the specified type attached to this game object.
+  example: []
+  syntax:
+    content: public T GetComponent<T>()
+    typeParameters:
+    - id: T
+      description: The type of component to get.
+    return:
+      type: '{T}'
+      description: The component if found, otherwise null.
+    content.vb: Public Function GetComponent(Of T)() As T
+  overload: RayGame.GameObject.GetComponent*
+  nameWithType.vb: GameObject.GetComponent(Of T)()
+  fullName.vb: RayGame.GameObject.GetComponent(Of T)()
+  name.vb: GetComponent(Of T)()
+- uid: RayGame.GameObject.DeleteComponent``1
+  commentId: M:RayGame.GameObject.DeleteComponent``1
+  id: DeleteComponent``1
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: DeleteComponent<T>()
+  nameWithType: GameObject.DeleteComponent<T>()
+  fullName: RayGame.GameObject.DeleteComponent<T>()
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: DeleteComponent
+    path: ../RayGame/GameObject.cs
+    startLine: 129
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Deletes the first component of the specified type from this game object.
+  example: []
+  syntax:
+    content: 'public void DeleteComponent<T>() where T : IGameComponent'
+    typeParameters:
+    - id: T
+      description: The type of component to delete.
+    content.vb: Public Sub DeleteComponent(Of T As IGameComponent)()
+  overload: RayGame.GameObject.DeleteComponent*
+  nameWithType.vb: GameObject.DeleteComponent(Of T)()
+  fullName.vb: RayGame.GameObject.DeleteComponent(Of T)()
+  name.vb: DeleteComponent(Of T)()
+- uid: RayGame.GameObject.DeleteObjectComponents
+  commentId: M:RayGame.GameObject.DeleteObjectComponents
+  id: DeleteObjectComponents
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: DeleteObjectComponents()
+  nameWithType: GameObject.DeleteObjectComponents()
+  fullName: RayGame.GameObject.DeleteObjectComponents()
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: DeleteObjectComponents
+    path: ../RayGame/GameObject.cs
+    startLine: 137
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Deletes all components from this game object.
+  example: []
+  syntax:
+    content: public void DeleteObjectComponents()
+    content.vb: Public Sub DeleteObjectComponents()
+  overload: RayGame.GameObject.DeleteObjectComponents*
+- uid: RayGame.GameObject.GetComponentNameList(System.Boolean)
+  commentId: M:RayGame.GameObject.GetComponentNameList(System.Boolean)
+  id: GetComponentNameList(System.Boolean)
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: GetComponentNameList(bool)
+  nameWithType: GameObject.GetComponentNameList(bool)
+  fullName: RayGame.GameObject.GetComponentNameList(bool)
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: GetComponentNameList
+    path: ../RayGame/GameObject.cs
+    startLine: 147
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Gets a list of the names of all components attached to this game object.
+  example: []
+  syntax:
+    content: public List<string> GetComponentNameList(bool Print)
+    parameters:
+    - id: Print
+      type: System.Boolean
+      description: If true, prints the names to the console.
+    return:
+      type: System.Collections.Generic.List{System.String}
+      description: A list of component names.
+    content.vb: Public Function GetComponentNameList(Print As Boolean) As List(Of String)
+  overload: RayGame.GameObject.GetComponentNameList*
+  nameWithType.vb: GameObject.GetComponentNameList(Boolean)
+  fullName.vb: RayGame.GameObject.GetComponentNameList(Boolean)
+  name.vb: GetComponentNameList(Boolean)
+- uid: RayGame.GameObject.ShiftComponent``1(System.Int32)
+  commentId: M:RayGame.GameObject.ShiftComponent``1(System.Int32)
+  id: ShiftComponent``1(System.Int32)
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: ShiftComponent<T>(int)
+  nameWithType: GameObject.ShiftComponent<T>(int)
+  fullName: RayGame.GameObject.ShiftComponent<T>(int)
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: ShiftComponent
+    path: ../RayGame/GameObject.cs
+    startLine: 162
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Shifts a component of the specified type by a given offset in the component list.
+  example: []
+  syntax:
+    content: 'public void ShiftComponent<T>(int offset) where T : IGameComponent'
+    parameters:
+    - id: offset
+      type: System.Int32
+      description: The offset by which to shift the component.
+    typeParameters:
+    - id: T
+      description: The type of component to shift.
+    content.vb: Public Sub ShiftComponent(Of T As IGameComponent)(offset As Integer)
+  overload: RayGame.GameObject.ShiftComponent*
+  nameWithType.vb: GameObject.ShiftComponent(Of T)(Integer)
+  fullName.vb: RayGame.GameObject.ShiftComponent(Of T)(Integer)
+  name.vb: ShiftComponent(Of T)(Integer)
+- uid: RayGame.GameObject.HasComponent``1
+  commentId: M:RayGame.GameObject.HasComponent``1
+  id: HasComponent``1
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: HasComponent<T>()
+  nameWithType: GameObject.HasComponent<T>()
+  fullName: RayGame.GameObject.HasComponent<T>()
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: HasComponent
+    path: ../RayGame/GameObject.cs
+    startLine: 180
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Checks if this game object has a component of the specified type.
+  example: []
+  syntax:
+    content: 'public bool HasComponent<T>() where T : IGameComponent'
+    typeParameters:
+    - id: T
+      description: The type of component to check for.
+    return:
+      type: System.Boolean
+      description: True if the component is found, otherwise false.
+    content.vb: Public Function HasComponent(Of T As IGameComponent)() As Boolean
+  overload: RayGame.GameObject.HasComponent*
+  nameWithType.vb: GameObject.HasComponent(Of T)()
+  fullName.vb: RayGame.GameObject.HasComponent(Of T)()
+  name.vb: HasComponent(Of T)()
+- uid: RayGame.GameObject.AddRenderer``1
+  commentId: M:RayGame.GameObject.AddRenderer``1
+  id: AddRenderer``1
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: AddRenderer<T>()
+  nameWithType: GameObject.AddRenderer<T>()
+  fullName: RayGame.GameObject.AddRenderer<T>()
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: AddRenderer
+    path: ../RayGame/GameObject.cs
+    startLine: 198
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Adds a renderer of the specified type to this game object.
+  example: []
+  syntax:
+    content: 'public T AddRenderer<T>() where T : IRenderer, new()'
+    typeParameters:
+    - id: T
+      description: The type of renderer to add.
+    return:
+      type: '{T}'
+      description: The added renderer.
+    content.vb: Public Function AddRenderer(Of T As {IRenderer, New})() As T
+  overload: RayGame.GameObject.AddRenderer*
+  nameWithType.vb: GameObject.AddRenderer(Of T)()
+  fullName.vb: RayGame.GameObject.AddRenderer(Of T)()
+  name.vb: AddRenderer(Of T)()
+- uid: RayGame.GameObject.DeleteRenderer``1(System.Int32)
+  commentId: M:RayGame.GameObject.DeleteRenderer``1(System.Int32)
+  id: DeleteRenderer``1(System.Int32)
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: DeleteRenderer<T>(int)
+  nameWithType: GameObject.DeleteRenderer<T>(int)
+  fullName: RayGame.GameObject.DeleteRenderer<T>(int)
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: DeleteRenderer
+    path: ../RayGame/GameObject.cs
+    startLine: 212
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Deletes a renderer of the specified type at the given index from this game object.
+  example: []
+  syntax:
+    content: 'public void DeleteRenderer<T>(int Index) where T : class, IRenderer'
+    parameters:
+    - id: Index
+      type: System.Int32
+      description: The index of the renderer to delete.
+    typeParameters:
+    - id: T
+      description: The type of renderer to delete.
+    content.vb: Public Sub DeleteRenderer(Of T As {Class, IRenderer})(Index As Integer)
+  overload: RayGame.GameObject.DeleteRenderer*
+  nameWithType.vb: GameObject.DeleteRenderer(Of T)(Integer)
+  fullName.vb: RayGame.GameObject.DeleteRenderer(Of T)(Integer)
+  name.vb: DeleteRenderer(Of T)(Integer)
+- uid: RayGame.GameObject.GetRenderer``1(System.Int32)
+  commentId: M:RayGame.GameObject.GetRenderer``1(System.Int32)
+  id: GetRenderer``1(System.Int32)
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: GetRenderer<T>(int)
+  nameWithType: GameObject.GetRenderer<T>(int)
+  fullName: RayGame.GameObject.GetRenderer<T>(int)
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: GetRenderer
+    path: ../RayGame/GameObject.cs
+    startLine: 228
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: >-
+    Gets a renderer of the specified type at the given index from this game object. If the GameObject contains
+
+    multiple types of renderers, then the index takes into account only the specified T
+  example: []
+  syntax:
+    content: 'public T GetRenderer<T>(int Index) where T : class, IRenderer'
+    parameters:
+    - id: Index
+      type: System.Int32
+      description: The index of the renderer to get.
+    typeParameters:
+    - id: T
+      description: The type of renderer to get.
+    return:
+      type: '{T}'
+      description: The renderer if found, otherwise null.
+    content.vb: Public Function GetRenderer(Of T As {Class, IRenderer})(Index As Integer) As T
+  overload: RayGame.GameObject.GetRenderer*
+  nameWithType.vb: GameObject.GetRenderer(Of T)(Integer)
+  fullName.vb: RayGame.GameObject.GetRenderer(Of T)(Integer)
+  name.vb: GetRenderer(Of T)(Integer)
+- uid: RayGame.GameObject.GetRendererNameList(System.Boolean)
+  commentId: M:RayGame.GameObject.GetRendererNameList(System.Boolean)
+  id: GetRendererNameList(System.Boolean)
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: GetRendererNameList(bool)
+  nameWithType: GameObject.GetRendererNameList(bool)
+  fullName: RayGame.GameObject.GetRendererNameList(bool)
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: GetRendererNameList
+    path: ../RayGame/GameObject.cs
+    startLine: 246
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Gets a list of the names of all renderers attached to this game object.
+  example: []
+  syntax:
+    content: public List<string> GetRendererNameList(bool Print)
+    parameters:
+    - id: Print
+      type: System.Boolean
+      description: If true, prints the names to the console.
+    return:
+      type: System.Collections.Generic.List{System.String}
+      description: A list of renderer names.
+    content.vb: Public Function GetRendererNameList(Print As Boolean) As List(Of String)
+  overload: RayGame.GameObject.GetRendererNameList*
+  nameWithType.vb: GameObject.GetRendererNameList(Boolean)
+  fullName.vb: RayGame.GameObject.GetRendererNameList(Boolean)
+  name.vb: GetRendererNameList(Boolean)
+- uid: RayGame.GameObject.DeleteAllRenderers
+  commentId: M:RayGame.GameObject.DeleteAllRenderers
+  id: DeleteAllRenderers
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: DeleteAllRenderers()
+  nameWithType: GameObject.DeleteAllRenderers()
+  fullName: RayGame.GameObject.DeleteAllRenderers()
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: DeleteAllRenderers
+    path: ../RayGame/GameObject.cs
+    startLine: 259
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Deletes all renderers from this game object.
+  example: []
+  syntax:
+    content: public void DeleteAllRenderers()
+    content.vb: Public Sub DeleteAllRenderers()
+  overload: RayGame.GameObject.DeleteAllRenderers*
+- uid: RayGame.GameObject.HasRenderer``1
+  commentId: M:RayGame.GameObject.HasRenderer``1
+  id: HasRenderer``1
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: HasRenderer<T>()
+  nameWithType: GameObject.HasRenderer<T>()
+  fullName: RayGame.GameObject.HasRenderer<T>()
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: HasRenderer
+    path: ../RayGame/GameObject.cs
+    startLine: 269
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Checks if this game object has a renderer of the specified type.
+  example: []
+  syntax:
+    content: 'public bool HasRenderer<T>() where T : IRenderer'
+    typeParameters:
+    - id: T
+      description: The type of renderer to check for.
+    return:
+      type: System.Boolean
+      description: True if the renderer is found, otherwise false.
+    content.vb: Public Function HasRenderer(Of T As IRenderer)() As Boolean
+  overload: RayGame.GameObject.HasRenderer*
+  nameWithType.vb: GameObject.HasRenderer(Of T)()
+  fullName.vb: RayGame.GameObject.HasRenderer(Of T)()
+  name.vb: HasRenderer(Of T)()
+- uid: RayGame.GameObject.ShiftRenderer``1(System.Int32)
+  commentId: M:RayGame.GameObject.ShiftRenderer``1(System.Int32)
+  id: ShiftRenderer``1(System.Int32)
+  parent: RayGame.GameObject
+  langs:
+  - csharp
+  - vb
+  name: ShiftRenderer<T>(int)
+  nameWithType: GameObject.ShiftRenderer<T>(int)
+  fullName: RayGame.GameObject.ShiftRenderer<T>(int)
+  type: Method
+  source:
+    remote:
+      path: RayGame/GameObject.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: ShiftRenderer
+    path: ../RayGame/GameObject.cs
+    startLine: 283
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Shifts a renderer of the specified type by a given offset in the renderer list.
+  example: []
+  syntax:
+    content: 'public void ShiftRenderer<T>(int offset) where T : IRenderer'
+    parameters:
+    - id: offset
+      type: System.Int32
+      description: The offset by which to shift the renderer.
+    typeParameters:
+    - id: T
+      description: The type of renderer to shift.
+    content.vb: Public Sub ShiftRenderer(Of T As IRenderer)(offset As Integer)
+  overload: RayGame.GameObject.ShiftRenderer*
+  nameWithType.vb: GameObject.ShiftRenderer(Of T)(Integer)
+  fullName.vb: RayGame.GameObject.ShiftRenderer(Of T)(Integer)
+  name.vb: ShiftRenderer(Of T)(Integer)
+references:
+- uid: RayGame
+  commentId: N:RayGame
+  href: RayGame.html
+  name: RayGame
+  nameWithType: RayGame
+  fullName: RayGame
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: RayGame.Mesh
+  commentId: T:RayGame.Mesh
+  parent: RayGame
+  href: RayGame.Mesh.html
+  name: Mesh
+  nameWithType: Mesh
+  fullName: RayGame.Mesh
+- uid: System.Collections.Generic.List{RayGame.Mesh}
+  commentId: T:System.Collections.Generic.List{RayGame.Mesh}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Mesh>
+  nameWithType: List<Mesh>
+  fullName: System.Collections.Generic.List<RayGame.Mesh>
+  nameWithType.vb: List(Of Mesh)
+  fullName.vb: System.Collections.Generic.List(Of RayGame.Mesh)
+  name.vb: List(Of Mesh)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: RayGame.Mesh
+    name: Mesh
+    href: RayGame.Mesh.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RayGame.Mesh
+    name: Mesh
+    href: RayGame.Mesh.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: RayGame.IRenderer
+  commentId: T:RayGame.IRenderer
+  parent: RayGame
+  href: RayGame.IRenderer.html
+  name: IRenderer
+  nameWithType: IRenderer
+  fullName: RayGame.IRenderer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: RayGame.GameObject.Transform
+  commentId: F:RayGame.GameObject.Transform
+  href: RayGame.GameObject.html#RayGame_GameObject_Transform
+  name: Transform
+  nameWithType: GameObject.Transform
+  fullName: RayGame.GameObject.Transform
+- uid: RayGame.Transform
+  commentId: T:RayGame.Transform
+  parent: RayGame
+  href: RayGame.Transform.html
+  name: Transform
+  nameWithType: Transform
+  fullName: RayGame.Transform
+- uid: RayGame.GameObject.StartActions*
+  commentId: Overload:RayGame.GameObject.StartActions
+  href: RayGame.GameObject.html#RayGame_GameObject_StartActions
+  name: StartActions
+  nameWithType: GameObject.StartActions
+  fullName: RayGame.GameObject.StartActions
+- uid: RayGame.GameObject.UpdateActions*
+  commentId: Overload:RayGame.GameObject.UpdateActions
+  href: RayGame.GameObject.html#RayGame_GameObject_UpdateActions
+  name: UpdateActions
+  nameWithType: GameObject.UpdateActions
+  fullName: RayGame.GameObject.UpdateActions
+- uid: RayGame.GameObject.IsColliding*
+  commentId: Overload:RayGame.GameObject.IsColliding
+  href: RayGame.GameObject.html#RayGame_GameObject_IsColliding_RayGame_GameObject_
+  name: IsColliding
+  nameWithType: GameObject.IsColliding
+  fullName: RayGame.GameObject.IsColliding
+- uid: RayGame.GameObject
+  commentId: T:RayGame.GameObject
+  parent: RayGame
+  href: RayGame.GameObject.html
+  name: GameObject
+  nameWithType: GameObject
+  fullName: RayGame.GameObject
+- uid: RayGame.GameObject.SetTransform*
+  commentId: Overload:RayGame.GameObject.SetTransform
+  href: RayGame.GameObject.html#RayGame_GameObject_SetTransform_RayGame_Transform_
+  name: SetTransform
+  nameWithType: GameObject.SetTransform
+  fullName: RayGame.GameObject.SetTransform
+- uid: RayGame.GameObject.AddComponent*
+  commentId: Overload:RayGame.GameObject.AddComponent
+  href: RayGame.GameObject.html#RayGame_GameObject_AddComponent__1
+  name: AddComponent
+  nameWithType: GameObject.AddComponent
+  fullName: RayGame.GameObject.AddComponent
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: RayGame.GameObject.GetComponent*
+  commentId: Overload:RayGame.GameObject.GetComponent
+  href: RayGame.GameObject.html#RayGame_GameObject_GetComponent__1
+  name: GetComponent
+  nameWithType: GameObject.GetComponent
+  fullName: RayGame.GameObject.GetComponent
+- uid: RayGame.GameObject.DeleteComponent*
+  commentId: Overload:RayGame.GameObject.DeleteComponent
+  href: RayGame.GameObject.html#RayGame_GameObject_DeleteComponent__1
+  name: DeleteComponent
+  nameWithType: GameObject.DeleteComponent
+  fullName: RayGame.GameObject.DeleteComponent
+- uid: RayGame.GameObject.DeleteObjectComponents*
+  commentId: Overload:RayGame.GameObject.DeleteObjectComponents
+  href: RayGame.GameObject.html#RayGame_GameObject_DeleteObjectComponents
+  name: DeleteObjectComponents
+  nameWithType: GameObject.DeleteObjectComponents
+  fullName: RayGame.GameObject.DeleteObjectComponents
+- uid: RayGame.GameObject.GetComponentNameList*
+  commentId: Overload:RayGame.GameObject.GetComponentNameList
+  href: RayGame.GameObject.html#RayGame_GameObject_GetComponentNameList_System_Boolean_
+  name: GetComponentNameList
+  nameWithType: GameObject.GetComponentNameList
+  fullName: RayGame.GameObject.GetComponentNameList
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: RayGame.GameObject.ShiftComponent*
+  commentId: Overload:RayGame.GameObject.ShiftComponent
+  href: RayGame.GameObject.html#RayGame_GameObject_ShiftComponent__1_System_Int32_
+  name: ShiftComponent
+  nameWithType: GameObject.ShiftComponent
+  fullName: RayGame.GameObject.ShiftComponent
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: RayGame.GameObject.HasComponent*
+  commentId: Overload:RayGame.GameObject.HasComponent
+  href: RayGame.GameObject.html#RayGame_GameObject_HasComponent__1
+  name: HasComponent
+  nameWithType: GameObject.HasComponent
+  fullName: RayGame.GameObject.HasComponent
+- uid: RayGame.GameObject.AddRenderer*
+  commentId: Overload:RayGame.GameObject.AddRenderer
+  href: RayGame.GameObject.html#RayGame_GameObject_AddRenderer__1
+  name: AddRenderer
+  nameWithType: GameObject.AddRenderer
+  fullName: RayGame.GameObject.AddRenderer
+- uid: RayGame.GameObject.DeleteRenderer*
+  commentId: Overload:RayGame.GameObject.DeleteRenderer
+  href: RayGame.GameObject.html#RayGame_GameObject_DeleteRenderer__1_System_Int32_
+  name: DeleteRenderer
+  nameWithType: GameObject.DeleteRenderer
+  fullName: RayGame.GameObject.DeleteRenderer
+- uid: RayGame.GameObject.GetRenderer*
+  commentId: Overload:RayGame.GameObject.GetRenderer
+  href: RayGame.GameObject.html#RayGame_GameObject_GetRenderer__1_System_Int32_
+  name: GetRenderer
+  nameWithType: GameObject.GetRenderer
+  fullName: RayGame.GameObject.GetRenderer
+- uid: RayGame.GameObject.GetRendererNameList*
+  commentId: Overload:RayGame.GameObject.GetRendererNameList
+  href: RayGame.GameObject.html#RayGame_GameObject_GetRendererNameList_System_Boolean_
+  name: GetRendererNameList
+  nameWithType: GameObject.GetRendererNameList
+  fullName: RayGame.GameObject.GetRendererNameList
+- uid: RayGame.GameObject.DeleteAllRenderers*
+  commentId: Overload:RayGame.GameObject.DeleteAllRenderers
+  href: RayGame.GameObject.html#RayGame_GameObject_DeleteAllRenderers
+  name: DeleteAllRenderers
+  nameWithType: GameObject.DeleteAllRenderers
+  fullName: RayGame.GameObject.DeleteAllRenderers
+- uid: RayGame.GameObject.HasRenderer*
+  commentId: Overload:RayGame.GameObject.HasRenderer
+  href: RayGame.GameObject.html#RayGame_GameObject_HasRenderer__1
+  name: HasRenderer
+  nameWithType: GameObject.HasRenderer
+  fullName: RayGame.GameObject.HasRenderer
+- uid: RayGame.GameObject.ShiftRenderer*
+  commentId: Overload:RayGame.GameObject.ShiftRenderer
+  href: RayGame.GameObject.html#RayGame_GameObject_ShiftRenderer__1_System_Int32_
+  name: ShiftRenderer
+  nameWithType: GameObject.ShiftRenderer
+  fullName: RayGame.GameObject.ShiftRenderer

@@ -5,6 +5,17 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <NoWarn>$(NoWarn);1591</NoWarn> <!-- Suppresses missing XML comment warning -->
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\RayGame.xml</DocumentationFile>
+      <NoWarn>$(NoWarn);1591</NoWarn> <!-- Suppresses missing XML comment warning -->
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>bin\Release\RayGame.xml</DocumentationFile>
+      <NoWarn>$(NoWarn);1591</NoWarn> <!-- Suppresses missing XML comment warning -->
     </PropertyGroup>
 
     <ItemGroup>

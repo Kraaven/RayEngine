@@ -11,7 +11,9 @@ namespace RayGame;
 /// Interface for game components.
 /// </summary>
 /// <remarks>
-/// Implement this interface to create custom game components.
+/// Implement this interface to create custom game components. Each <see cref="GameObject"/> has a List of Components that it runs by itself.
+/// Hence, any class that implements <see cref="IGameComponent"/>, will be eligible to perform as a script attached to the Object.
+/// By This, It is possible to create *Prefabs* buy creating 1 class component that adds all the required components and modifications.
 /// </remarks>
 public interface IGameComponent
 {
@@ -40,24 +42,26 @@ public interface IGameComponent
 /// Interface for renderers.
 /// </summary>
 /// <remarks>
-/// Implement this interface to create custom renderers.
-/// </remarks>
+/// This is interface is to be inherited by all Renderers, If you wish to make a custom renderer, then u can,
+/// but i would recommend sticking to the provided renderers. **Primarily for internal use**
+/// </remarks>>
 public interface IRenderer
 {
     /// <summary>
     /// The container GameObject for this renderer.
+    /// Any Actions that want to be performed to it, is does through this reference. 
     /// </summary>
     public GameObject Container { set; get; }
 
     /// <summary>
-    /// Called when the renderer is Added.
+    /// The Function Called when the Renderer is Added to an Object.
     /// </summary>
     public void Start()
     {
     }
 
     /// <summary>
-    /// Called every frame to update the renderer.
+    /// Called every frame to update the renderer. Primarily holds code to render the content.
     /// </summary>
     public void Update()
     {
@@ -65,11 +69,13 @@ public interface IRenderer
 }
 
 /// <summary>
-/// Represents a transformation in 2D space.
+/// The class that holds all the transformation data for an object 
 /// </summary>
 /// <remarks>
-/// Contains position, rotation, and scale information, Contains useful functions to use the Transform.
-/// </remarks>
+/// A Class that is used to represent the Position, Rotation and Scale of an object.
+/// This class super-imposes its properties onto vertices per frame, which means that any object containing this class can enact global transformations within that <see cref="GameObject"/>.
+/// By default, any transformations does on the object should be done through its Transform.
+/// </remarks>>
 public class Transform
 {
     /// <summary>
@@ -100,10 +106,8 @@ public class Transform
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Transform"/> class with default values.
-    /// </summary>
-    /// <remarks>
     /// Position being (0,0). Rotation being 0. Scale being 1.
-    /// </remarks>>
+    /// </summary>
     public Transform()
     {
         Position = new Vector2(0, 0);
@@ -113,11 +117,9 @@ public class Transform
 
     /// <summary>
     /// Rotates the transform by the specified angle.
+    /// Takes an Angle in degrees, and stores them internally as radians.
     /// </summary>
     /// <param name="Angle">The angle in degrees.</param>
-    /// <remarks>
-    /// Takes an Angle in degrees, and stores them internally as radians.
-    /// </remarks>>
     public void Rotate(float Angle)
     {
         Rotation += MathF.PI * (Angle / 180);
@@ -144,18 +146,16 @@ public class Transform
 
     /// <summary>
     /// Sets the rotation of the transform to the specified angle.
+    /// Takes an Angle in degrees, and stores them internally as radians.
     /// </summary>
     /// <param name="Angle">The angle in degrees.</param>
-    /// <remarks>
-    /// Takes an Angle in degrees, and stores them internally as radians.
-    /// </remarks>>
     public void SetRotation(float Angle)
     {
         Rotation = MathF.PI * (Angle / 180);
     }
 
     /// <summary>
-    /// Gets the rotation of the transform in radians.
+    /// Gets the rotation of the transform.
     /// </summary>
     /// <returns>The rotation in returned as Degrees.</returns>
     /// <returns>
@@ -168,12 +168,10 @@ public class Transform
 
     /// <summary>
     /// Applies the transform to an array of vertices.
+    /// Applies that transforms onto the Vertices of a <see cref="Mesh"/>'s Vertex Array. Primarily used internally in the Engine.
     /// </summary>
     /// <param name="VertexArray">The array of vertices to transform.</param>
     /// <returns>The transformed array of vertices.</returns>
-    /// <remarks>
-    /// Applies that transforms onto the Vertices of a <see cref="Mesh"/>'s Vertex Array. Primarily used internally in the Engine.
-    /// </remarks>>
     public Vector2[] ApplyTransform(Vector2[] VertexArray)
     {
         for (var i = 0; i < VertexArray.Length; i++)
