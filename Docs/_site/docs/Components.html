@@ -2,11 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class Demo
- </title>
+      <title>Logic </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class Demo
- ">
+      <meta name="title" content="Logic ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -18,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Demo_Demo.md&amp;value=---%0Auid%3A%20RayGame.Demo.Demo%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Kraaven/RayEngine/blob/main/Docs/docs/Components.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -41,7 +39,7 @@
   </script>
 
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -86,108 +84,103 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="RayGame.Demo.Demo">
+        <article data-uid="">
+<h1 id="logic">Logic</h1>
 
+<p>Think of Components as scripts that you attach to a GameObject to add logic to what it does. There are no restrictions about how many components a GameObject has, or how many GameObjects have the same component.</p>
+<p>However, always keep in mind, that a GameObject can only have 1 type of component at a time, so write your logic accordingly. It is not possible to add the same component to a GameObject multiple times.</p>
+<h2 id="the-component-script">The Component Script</h2>
+<ul>
+<li>Lets start talking about components.</li>
+</ul>
+<ol>
+<li>There can be only 1 of them on a Gameobject</li>
+<li>They must implement the &quot;IGameComponent&quot; Interface</li>
+<li>They Must have a Container variable</li>
+<li>It must have a Start() and Update() method.</li>
+</ol>
+<pre><code class="lang-csharp">using RayGame;
+namespace [YOUR_NAMESPACE];
 
+public class Main : IGameComponent
+{
+    public GameObject Container { get; set; }
 
-  <h1 id="RayGame_Demo_Demo" data-uid="RayGame.Demo.Demo" class="text-break">
-    Class Demo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Demo/Demo.cs/#L7"><i class="bi bi-code-slash"></i></a>
-  </h1>
+    public void Start()
+    {
+        
+    }
 
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="RayGame.html">RayGame</a>.<a class="xref" href="RayGame.Demo.html">Demo</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>RayGame.dll</dd></dl>
-  </div>
+    public void Update()
+    {
+        
+    }
+}
+</code></pre>
+<ul>
+<li>I have created a Main class to be my component.</li>
+<li>This is what an Empty Component script would look like.</li>
+<li>Notice how it Implements IGameComponent</li>
+<li>If your IDE supports it, then just by typing the name of the variable or method, A suggestion will show up to autocomplete the entire sentence.</li>
+<li>The Container variable is the reference you will use to reffer to your GameObject that component to attached to.</li>
+<li>With that said, lets add some simple code:</li>
+</ul>
+<pre><code class="lang-csharp">using RayGame;
+namespace [YOUR_NAMESPACE];
 
-  <div class="markdown summary"></div>
-  <div class="markdown conceptual"></div>
+public class Main : IGameComponent
+{
+    public GameObject Container { get; set; }
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Demo</code></pre>
-  </div>
+    public void Start()
+    {
+        Console.WriteLine(&quot;Hello Component!&quot;);
+    }
 
+    public void Update()
+    {
+        
+    }
+}
+</code></pre>
+<ul>
+<li>And with that, we finally have our Component Script done. Lets put this all together!</li>
+</ul>
+<h2 id="running-the-engine">Running the Engine</h2>
+<p>Now we have both an Entry Script, and a Component to use, lets finally have something we can see.</p>
+<ul>
+<li>In our Entry script, lets now use our &quot;Main&quot; Component in the INIT function:</li>
+</ul>
+<pre><code class="lang-csharp">using RayGame;
+using [YOUR_NAMESPACE];;
 
+public class Entry
+{
+    public static void Main()
+    {
+        
+        Console.WriteLine(&quot;Hello World&quot;);
+        Engine.INIT&lt;Main&gt;();
+    }
+}
 
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">Demo</span></div>
-    </dd>
-  </dl>
-
-
-
-  <dl class="typelist derived">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-  </dd></dl>
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="RayGame_Demo_Demo_Main_" data-uid="RayGame.Demo.Demo.Main*"></a>
-
-  <h3 id="RayGame_Demo_Demo_Main" data-uid="RayGame.Demo.Demo.Main">
-  Main()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Demo/Demo.cs/#L10"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Main()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+</code></pre>
+<ul>
+<li>And with this, your window has opened up and your cosole should be showing:
+<blockquote>
+<p>Hello World</p>
+<p>Hello Component!</p>
+</blockquote>
+</li>
+</ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Demo/Demo.cs/#L7" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Kraaven/RayEngine/blob/main/Docs/docs/Components.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
 
       </div>
 

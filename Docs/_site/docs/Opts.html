@@ -2,11 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class Demo
- </title>
+      <title>Optimisations and Efficiency </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class Demo
- ">
+      <meta name="title" content="Optimisations and Efficiency ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -18,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Demo_Demo.md&amp;value=---%0Auid%3A%20RayGame.Demo.Demo%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Kraaven/RayEngine/blob/main/Docs/docs/Opts.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -41,7 +39,7 @@
   </script>
 
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -86,108 +84,74 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="RayGame.Demo.Demo">
+        <article data-uid="">
+<h1 id="optimisations-and-efficiency">Optimisations and Efficiency</h1>
 
+<ul>
+<li>Along with what i have shown you, there are other features like collision, that you need to find and learn by yourself.</li>
+<li>You can do that by checking out the API section next to the Docs that you are reading.</li>
+<li>In said API, all Classes and methods have a &lt;/&gt; next to it, clicking it will take you to the source code for said Class/ Method.</li>
+<li>The Plethora of methods available should let you do a variety of things, and i am open to adding more if requested.</li>
+<li>That being said, I have made a very basic version of Flappy bird, which you can check out by doing</li>
+</ul>
+<pre><code class="lang-csharp">Engine.INIT&lt;RayGame.Demo.Manager&gt;();
+</code></pre>
+<h2 id="new-code">New Code</h2>
+<ul>
+<li>After refining the code  made earlier, this is what it looks like now:</li>
+</ul>
+<pre><code class="lang-csharp">using System.Numerics;
+using RayGame;
+namespace TestEngine;
 
+public class Main : IGameComponent
+{
+    public GameObject Container { get; set; }
+    private GameObject square;
 
-  <h1 id="RayGame_Demo_Demo" data-uid="RayGame.Demo.Demo" class="text-break">
-    Class Demo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Demo/Demo.cs/#L7"><i class="bi bi-code-slash"></i></a>
-  </h1>
+    public void Start()
+    {
+        square = Engine.CreateGameObject(&quot;My Square&quot;,
+            new Transform(
+                new Vector2(400, 240),
+                0,
+                4.5f));
+        
+        square.AddRenderer&lt;MeshRenderer&gt;().SetMesh(
+            new Mesh(new[]
+            {
+                (10f, 10f),
+                (-10f, 10f),
+                (-10f, -10f),
+                (10f, -10f)
+            }));
+        
+        // Code has been expanded with \n so that its more readable.
+        
+    }
 
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="RayGame.html">RayGame</a>.<a class="xref" href="RayGame.Demo.html">Demo</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>RayGame.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"></div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Demo</code></pre>
-  </div>
-
-
-
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">Demo</span></div>
-    </dd>
-  </dl>
-
-
-
-  <dl class="typelist derived">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-  </dd></dl>
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="RayGame_Demo_Demo_Main_" data-uid="RayGame.Demo.Demo.Main*"></a>
-
-  <h3 id="RayGame_Demo_Demo_Main" data-uid="RayGame.Demo.Demo.Main">
-  Main()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Demo/Demo.cs/#L10"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Main()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public void Update()
+    {
+        square.Transform.Rotate(2);
+    }
+}
+</code></pre>
+<ul>
+<li><p>With the Help of different constructor, chaining, and declaring a variable inside a constructor, we have made the same program with less clutter.</p>
+</li>
+<li><p><em>technically, I could chain the AddRenderer&lt;&gt;() to the CreateGameObject(), but I decided not to</em>.</p>
+</li>
+<li><p>And that marks the END of this tutorial, from here, you can read the docs and try making your own stuff!</p>
+</li>
+</ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Demo/Demo.cs/#L7" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Kraaven/RayEngine/blob/main/Docs/docs/Opts.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
 
       </div>
 

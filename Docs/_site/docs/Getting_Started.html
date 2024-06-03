@@ -2,11 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class Demo
- </title>
+      <title>Hello World! </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class Demo
- ">
+      <meta name="title" content="Hello World! ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -18,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Demo_Demo.md&amp;value=---%0Auid%3A%20RayGame.Demo.Demo%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Kraaven/RayEngine/blob/main/Docs/docs/Getting_Started.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -41,7 +39,7 @@
   </script>
 
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -86,108 +84,60 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="RayGame.Demo.Demo">
+        <article data-uid="">
+<h1 id="hello-world">Hello World!</h1>
 
+<h2 id="note">Note:</h2>
+<p>Now that we finally have our project setup, lets begin writing some code!.
+Now, we would need 2 scripts to start with. A Entry script, and a Component to start everything else.
+Create a new folder if you want, organising files will be really helpful in the long run.</p>
+<h2 id="the-entry-script">The Entry script</h2>
+<ul>
+<li>When using this engine, we need some entry point to tell the Engine to start, thats what this script is for.</li>
+<li>So lets make a script called Entry.cs</li>
+<li>When using the engine, make sure to include:</li>
+</ul>
+<pre><code class="lang-csharp">using RayGame;
+</code></pre>
+<ul>
+<li>This is the Engine code that we have imported to start making something.</li>
+<li>After that, lets create a very standard C# script:</li>
+</ul>
+<pre><code class="lang-csharp">using RayGame;
+using [YOUR_NAMESPACE];;
 
-
-  <h1 id="RayGame_Demo_Demo" data-uid="RayGame.Demo.Demo" class="text-break">
-    Class Demo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Demo/Demo.cs/#L7"><i class="bi bi-code-slash"></i></a>
-  </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="RayGame.html">RayGame</a>.<a class="xref" href="RayGame.Demo.html">Demo</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>RayGame.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"></div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Demo</code></pre>
-  </div>
-
-
-
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">Demo</span></div>
-    </dd>
-  </dl>
-
-
-
-  <dl class="typelist derived">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-  </dd></dl>
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="RayGame_Demo_Demo_Main_" data-uid="RayGame.Demo.Demo.Main*"></a>
-
-  <h3 id="RayGame_Demo_Demo_Main" data-uid="RayGame.Demo.Demo.Main">
-  Main()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Demo/Demo.cs/#L10"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Main()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+public class Entry
+{
+    public static void Main()
+    {
+        
+        Console.WriteLine(&quot;Hello World&quot;);
+        //Note, the file does not HAVE to called Entry.
+    }
+}
+</code></pre>
+<ul>
+<li>Lovely, we now have a script that we can use as an entry, from here we can initiate the Engine to start doing what we want it to do.</li>
+<li>Via the Engine Class, we Run an INIT function to attach a Component of choice into a prebuilt GameObject that we then use to manipulate the Engine to do what we want.
+<ul>
+<li>Although that may seem complicated, dont worry, it will be explained.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-csharp">Engine.INIT&lt;T&gt;();
+</code></pre>
+<ul>
+<li>As you can see, the INIT function requires some class to replace its Template field. That class is going to be our Custom Component.</li>
+<li>In the next section, we will talk about Components, and finally get something to show!</li>
+</ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Demo/Demo.cs/#L7" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Kraaven/RayEngine/blob/main/Docs/docs/Getting_Started.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
 
       </div>
 

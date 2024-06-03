@@ -64,7 +64,7 @@ items:
       repo: https://github.com/Kraaven/RayEngine.git
     id: PipeInstances
     path: ../RayGame/Demo/Manager.cs
-    startLine: 13
+    startLine: 19
   assemblies:
   - RayGame
   namespace: RayGame.Demo
@@ -91,7 +91,7 @@ items:
       repo: https://github.com/Kraaven/RayEngine.git
     id: Running
     path: ../RayGame/Demo/Manager.cs
-    startLine: 14
+    startLine: 22
   assemblies:
   - RayGame
   namespace: RayGame.Demo
@@ -118,7 +118,7 @@ items:
       repo: https://github.com/Kraaven/RayEngine.git
     id: Instance
     path: ../RayGame/Demo/Manager.cs
-    startLine: 19
+    startLine: 28
   assemblies:
   - RayGame
   namespace: RayGame.Demo
@@ -147,7 +147,7 @@ items:
       repo: https://github.com/Kraaven/RayEngine.git
     id: Container
     path: ../RayGame/Demo/Manager.cs
-    startLine: 29
+    startLine: 39
   assemblies:
   - RayGame
   namespace: RayGame.Demo
@@ -180,7 +180,7 @@ items:
       repo: https://github.com/Kraaven/RayEngine.git
     id: Start
     path: ../RayGame/Demo/Manager.cs
-    startLine: 32
+    startLine: 43
   assemblies:
   - RayGame
   namespace: RayGame.Demo
@@ -210,7 +210,7 @@ items:
       repo: https://github.com/Kraaven/RayEngine.git
     id: Update
     path: ../RayGame/Demo/Manager.cs
-    startLine: 40
+    startLine: 56
   assemblies:
   - RayGame
   namespace: RayGame.Demo
@@ -240,7 +240,7 @@ items:
       repo: https://github.com/Kraaven/RayEngine.git
     id: SpawnObject
     path: ../RayGame/Demo/Manager.cs
-    startLine: 73
+    startLine: 100
   assemblies:
   - RayGame
   namespace: RayGame.Demo
@@ -266,7 +266,7 @@ items:
       repo: https://github.com/Kraaven/RayEngine.git
     id: RestartGame
     path: ../RayGame/Demo/Manager.cs
-    startLine: 98
+    startLine: 131
   assemblies:
   - RayGame
   namespace: RayGame.Demo

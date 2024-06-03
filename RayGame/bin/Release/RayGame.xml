@@ -1,0 +1,535 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RayGame</name>
+    </assembly>
+    <members>
+        <member name="T:RayGame.IGameComponent">
+            <summary>
+            Interface for game components.
+            </summary>
+            <remarks>
+            Implement this interface to create custom game components. Each <see cref="T:RayGame.GameObject"/> has a List of Components that it runs by itself.
+            Hence, any class that implements <see cref="T:RayGame.IGameComponent"/>, will be eligible to perform as a script attached to the Object.
+            By This, It is possible to create *Prefabs* buy creating 1 class component that adds all the required components and modifications.
+            </remarks>
+        </member>
+        <member name="P:RayGame.IGameComponent.Container">
+            <summary>
+            The container GameObject for this component.
+            </summary>
+        </member>
+        <member name="M:RayGame.IGameComponent.Start">
+            <summary>
+            Called when the component is Added.
+            </summary>
+        </member>
+        <member name="M:RayGame.IGameComponent.Update">
+            <summary>
+            Called every frame to update the component.
+            </summary>
+        </member>
+        <member name="T:RayGame.IRenderer">
+            <summary>
+            Interface for renderers.
+            </summary>
+            <remarks>
+            This is interface is to be inherited by all Renderers, If you wish to make a custom renderer, then u can,
+            but i would recommend sticking to the provided renderers. **Primarily for internal use**
+            </remarks>>
+        </member>
+        <member name="P:RayGame.IRenderer.Container">
+            <summary>
+            The container GameObject for this renderer.
+            Any Actions that want to be performed to it, is does through this reference. 
+            </summary>
+        </member>
+        <member name="M:RayGame.IRenderer.Start">
+            <summary>
+            The Function Called when the Renderer is Added to an Object.
+            </summary>
+        </member>
+        <member name="M:RayGame.IRenderer.Update">
+            <summary>
+            Called every frame to update the renderer. Primarily holds code to render the content.
+            </summary>
+        </member>
+        <member name="T:RayGame.Transform">
+            <summary>
+            The class that holds all the transformation data for an object 
+            </summary>
+            <remarks>
+            A Class that is used to represent the Position, Rotation and Scale of an object.
+            This class super-imposes its properties onto vertices per frame, which means that any object containing this class can enact global transformations within that <see cref="T:RayGame.GameObject"/>.
+            By default, any transformations does on the object should be done through its Transform.
+            </remarks>>
+        </member>
+        <member name="F:RayGame.Transform.Position">
+            <summary>
+            The position of the transform as a <see cref="T:System.Numerics.Vector2"/>.
+            </summary>
+        </member>
+        <member name="F:RayGame.Transform.Rotation">
+            <summary>
+            The rotation of the transform in radians.
+            </summary>
+        </member>
+        <member name="F:RayGame.Transform.Scale">
+            <summary>
+            The Scale of the transform as a Float.
+            </summary>
+        </member>
+        <member name="M:RayGame.Transform.#ctor(System.Numerics.Vector2,System.Single,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RayGame.Transform"/> class with specified position, rotation, and scale.
+            </summary>
+            <param name="pos">The position of the transform.</param>
+            <param name="ang">The rotation of the transform in degrees.</param>
+            <param name="sc">The scale of the transform.</param>
+        </member>
+        <member name="M:RayGame.Transform.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:RayGame.Transform"/> class with default values.
+            Position being (0,0). Rotation being 0. Scale being 1.
+            </summary>
+        </member>
+        <member name="M:RayGame.Transform.Rotate(System.Single)">
+            <summary>
+            Rotates the transform by the specified angle.
+            Takes an Angle in degrees, and stores them internally as radians.
+            </summary>
+            <param name="Angle">The angle in degrees.</param>
+        </member>
+        <member name="M:RayGame.Transform.Translate(System.ValueTuple{System.Single,System.Single})">
+            <summary>
+            Translates the transform by the specified offset.
+            </summary>
+            <param name="Offset">The offset as a tuple(<see cref="T:System.Single"/>, <see cref="T:System.Single"/>)</param>
+        </member>
+        <member name="M:RayGame.Transform.Translate(System.Numerics.Vector2)">
+            <summary>
+            Translates the transform by the specified offset.
+            </summary>
+            <param name="Offset">The offset as a <see cref="T:System.Numerics.Vector2"/>.</param>
+        </member>
+        <member name="M:RayGame.Transform.SetRotation(System.Single)">
+            <summary>
+            Sets the rotation of the transform to the specified angle.
+            Takes an Angle in degrees, and stores them internally as radians.
+            </summary>
+            <param name="Angle">The angle in degrees.</param>
+        </member>
+        <member name="M:RayGame.Transform.GetRotation">
+            <summary>
+            Gets the rotation of the transform.
+            </summary>
+            <returns>The rotation in returned as Degrees.</returns>
+            <returns>
+            <see cref="T:System.Single"/>
+            </returns>>
+        </member>
+        <member name="M:RayGame.Transform.ApplyTransform(System.Numerics.Vector2[])">
+            <summary>
+            Applies the transform to an array of vertices.
+            Applies that transforms onto the Vertices of a <see cref="T:RayGame.Mesh"/>'s Vertex Array. Primarily used internally in the Engine.
+            </summary>
+            <param name="VertexArray">The array of vertices to transform.</param>
+            <returns>The transformed array of vertices.</returns>
+        </member>
+        <member name="T:RayGame.CollisionDetection">
+            <summary>
+            Provides a method for collision detection between shapes.
+            </summary>
+            <remarks>
+            This is a Static class used internally to check the collision between Colliders in <see cref="T:RayGame.GameObject"/>s.**Primarily for internal use**
+            </remarks>>
+        </member>
+        <member name="M:RayGame.CollisionDetection.CheckCollision(System.Numerics.Vector2[],System.Numerics.Vector2[])">
+            <summary>
+            Checks if two shapes are colliding.
+            </summary>
+            <param name="shape1">The first shape.</param>
+            <param name="shape2">The second shape.</param>
+            <returns>True if the shapes are colliding, otherwise false.</returns>
+        </member>
+        <member name="T:RayGame.Engine">
+            <summary>
+            The main engine class that initializes and runs the game.
+            </summary>
+        </member>
+        <member name="F:RayGame.Engine.random">
+            <summary>
+            The Random Number Generator initiated with the Engine.
+            </summary>
+        </member>
+        <member name="P:RayGame.Engine.GAMETIME">
+            <summary>
+            The value associated with the amount of milliseconds passed.
+            </summary>
+        </member>
+        <member name="M:RayGame.Engine.INIT``1">
+            <summary>
+            Initializes the game engine with a specified game component. That Custom Component is the entry point into using the Engine.
+            </summary>
+            /// <typeparam name="T">The type of game component to initialize.</typeparam>
+        </member>
+        <member name="M:RayGame.Engine.CreateGameObject(System.String)">
+            <summary>
+            Creates a new game object with the specified name.
+            </summary>
+            <param name="name">The name of the game object.</param>
+            <returns>The created game object.</returns>
+        </member>
+        <member name="M:RayGame.Engine.CreateGameObject(System.String,RayGame.Transform)">
+            <summary>
+            Creates a new game object with the specified name and <see cref="T:RayGame.Transform"/>>.
+            </summary>
+            <param name="name">The name of the game object.</param>
+            <param name="transform">The transform of the game object.</param>
+            <returns>The created game object.</returns>
+        </member>
+        <member name="M:RayGame.Engine.CreateGameObject(System.String,System.Numerics.Vector2,System.Single,System.Single)">
+            <summary>
+            Creates a new game object with the specified name, position, angle, and scale.
+            </summary>
+            <param name="name">The name of the game object.</param>
+            <param name="Position">The position of the game object.</param>
+            <param name="Angle">The angle of the game object.</param>
+            <param name="Scale">The scale of the game object.</param>
+            <returns>The created game object.</returns>
+        </member>
+        <member name="M:RayGame.Engine.DeleteGameObject(RayGame.GameObject)">
+            <summary>
+            Deletes the specified game object.
+            </summary>
+            <param name="Gobj">The game object to delete.</param>
+        </member>
+        <member name="M:RayGame.Engine.FindObjectOfType``1">
+            <summary>
+            Finds the first game object that has a component of the specified type.
+            </summary>
+            <typeparam name="T">The type of component to look for.</typeparam>
+            <returns>The game object with the specified component, or null if not found.</returns>
+        </member>
+        <member name="M:RayGame.Engine.FindObjectByName(System.String)">
+            <summary>
+            Finds a game object by its name.
+            </summary>
+            <param name="name">The name of the game object.</param>
+            <returns>The game object with the specified name, or null if not found.</returns>
+        </member>
+        <member name="M:RayGame.Engine.EnableColliderRendering">
+            <summary>
+            Enables rendering of colliders for all game objects.
+            Look at <see cref="T:RayGame.GameObject"/> for more detail.
+            </summary>
+        </member>
+        <member name="M:RayGame.Engine.DisableColliderRendering">
+            <summary>
+            Disables rendering of colliders for all game objects.
+            Look at <see cref="T:RayGame.GameObject"/> for more detail.
+            </summary>
+        </member>
+        <member name="M:RayGame.Engine.GetGameObjectCount">
+            <summary>
+            Gets the count of game objects currently in the engine.
+            </summary>
+            <returns>The number of game objects.</returns>
+        </member>
+        <member name="T:RayGame.GameObject">
+            <summary>
+            Represents a game object in the Scene.
+            </summary>
+            <remarks>
+            The GameObjects are the building blocks of your scene. They contain a few fields that allow for adding logic and properties to make them functional.
+            </remarks>>
+        </member>
+        <member name="F:RayGame.GameObject.Colliders">
+            <summary>
+            The List of Colliders attached to the GameObject. They are represented as a List of <see cref="T:RayGame.Mesh"/>'s. You can add Colliders directly.
+            </summary>
+        </member>
+        <member name="F:RayGame.GameObject.DEBUGCOLIDERS">
+            <summary>
+            This is a property of the GameObject that determines what is to be rendered. If *false*, all the <see cref="T:RayGame.IRenderer"/>'s Update Method will be fired per frame.
+            If *true*, then instead of the <see cref="T:RayGame.IRenderer"/>'s, the Colliders attached to your GameObject will be rendered. This is for debugging purposes.
+            </summary>
+        </member>
+        <member name="F:RayGame.GameObject.ID">
+            <summary>
+            Think of this field as a unique ID for each GameObject.
+            </summary>
+        </member>
+        <member name="F:RayGame.GameObject.Name">
+            <summary>
+            This is the Name Associated with the GameObject
+            </summary>
+        </member>
+        <member name="F:RayGame.GameObject.Transform">
+            <summary>
+            This is the <see cref="F:RayGame.GameObject.Transform"/> attached to the GameObject.
+            </summary>
+        </member>
+        <member name="M:RayGame.GameObject.StartActions">
+            <summary>
+            The function that is called when the GameObject is Initiated. Not used in most cases. **Primarily for internal use**
+            </summary>
+        </member>
+        <member name="M:RayGame.GameObject.UpdateActions">
+            <summary>
+            This is the function that calls to update the state of the GameObject per frame.**Primarily for internal use**
+            </summary>
+        </member>
+        <member name="M:RayGame.GameObject.IsColliding(RayGame.GameObject)">
+            <summary>
+            Checks if this game object is colliding with the specified target game object.
+            </summary>
+            <param name="Target">The target game object to check for collisions with.</param>
+            <returns>True if a collision is detected, otherwise false.</returns>
+        </member>
+        <member name="M:RayGame.GameObject.SetTransform(RayGame.Transform)">
+            <summary>
+            Sets the transform of this game object to the specified new transform.
+            </summary>
+            <param name="newTransform">The new transform to set.</param>
+        </member>
+        <member name="M:RayGame.GameObject.AddComponent``1">
+            <summary>
+            Adds a component of the specified type to this game object.
+            </summary>
+            <typeparam name="T">The type of component to add.</typeparam>
+            <returns>The added component.</returns>
+        </member>
+        <member name="M:RayGame.GameObject.GetComponent``1">
+            /// <summary>
+            Gets the first component of the specified type attached to this game object.
+            </summary>
+            <typeparam name="T">The type of component to get.</typeparam>
+            <returns>The component if found, otherwise null.</returns>
+        </member>
+        <member name="M:RayGame.GameObject.DeleteComponent``1">
+            <summary>
+            Deletes the first component of the specified type from this game object.
+            </summary>
+            <typeparam name="T">The type of component to delete.</typeparam>
+        </member>
+        <member name="M:RayGame.GameObject.DeleteObjectComponents">
+            <summary>
+            Deletes all components from this game object.
+            </summary>
+        </member>
+        <member name="M:RayGame.GameObject.GetComponentNameList(System.Boolean)">
+            <summary>
+            Gets a list of the names of all components attached to this game object.
+            </summary>
+            <param name="Print">If true, prints the names to the console.</param>
+            <returns>A list of component names.</returns>
+        </member>
+        <member name="M:RayGame.GameObject.ShiftComponent``1(System.Int32)">
+            <summary>
+            Shifts a component of the specified type by a given offset in the component list.
+            </summary>
+            <typeparam name="T">The type of component to shift.</typeparam>
+            <param name="offset">The offset by which to shift the component.</param>
+        </member>
+        <member name="M:RayGame.GameObject.HasComponent``1">
+            <summary>
+            Checks if this game object has a component of the specified type.
+            </summary>
+            <typeparam name="T">The type of component to check for.</typeparam>
+            <returns>True if the component is found, otherwise false.</returns>
+        </member>
+        <member name="M:RayGame.GameObject.AddRenderer``1">
+            <summary>
+            Adds a renderer of the specified type to this game object.
+            </summary>
+            <typeparam name="T">The type of renderer to add.</typeparam>
+            <returns>The added renderer.</returns>
+        </member>
+        <member name="M:RayGame.GameObject.DeleteRenderer``1(System.Int32)">
+            <summary>
+            Deletes a renderer of the specified type at the given index from this game object.
+            </summary>
+            <typeparam name="T">The type of renderer to delete.</typeparam>
+            <param name="Index">The index of the renderer to delete.</param>
+        </member>
+        <member name="M:RayGame.GameObject.GetRenderer``1(System.Int32)">
+            <summary>
+            Gets a renderer of the specified type at the given index from this game object. If the GameObject contains
+            multiple types of renderers, then the index takes into account only the specified <see cref="!:T"/>
+            </summary>
+            <typeparam name="T">The type of renderer to get.</typeparam>
+            <param name="Index">The index of the renderer to get.</param>
+            <returns>The renderer if found, otherwise null.</returns>
+        </member>
+        <member name="M:RayGame.GameObject.GetRendererNameList(System.Boolean)">
+            <summary>
+            Gets a list of the names of all renderers attached to this game object.
+            </summary>
+            <param name="Print">If true, prints the names to the console.</param>
+            <returns>A list of renderer names.</returns>
+        </member>
+        <member name="M:RayGame.GameObject.DeleteAllRenderers">
+            <summary>
+            Deletes all renderers from this game object.
+            </summary>
+        </member>
+        <member name="M:RayGame.GameObject.HasRenderer``1">
+            <summary>
+            Checks if this game object has a renderer of the specified type.
+            </summary>
+            <typeparam name="T">The type of renderer to check for.</typeparam>
+            <returns>True if the renderer is found, otherwise false.</returns>
+        </member>
+        <member name="M:RayGame.GameObject.ShiftRenderer``1(System.Int32)">
+            <summary>
+            Shifts a renderer of the specified type by a given offset in the renderer list.
+            </summary>
+            <typeparam name="T">The type of renderer to shift.</typeparam>
+            <param name="offset">The offset by which to shift the renderer.</param>
+        </member>
+        <member name="T:RayGame.Mesh">
+            <summary>
+            Represents a 2D mesh consisting of a collection of vertices.
+            </summary>
+            <remarks>
+            A Mesh is a collection of Vertices that is used to display/render anything. It is always a closed loop. The Mesh also have functions that can edit it, however, be careful, as all modifications as *permanent*.
+            It is Attached to a <see cref="T:RayGame.MeshRenderer"/> to be viewed at the <see cref="T:RayGame.GameObject"/>'s Position. The vertices themselves are always represented in local space.
+            </remarks>
+        </member>
+        <member name="M:RayGame.Mesh.#ctor(System.ValueTuple{System.Single,System.Single}[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:RayGame.Mesh"/> class with an array of vertices specified as tuples.
+            </summary>
+            <param name="vertexArray">An array of tuples representing the vertices of the mesh.</param>
+        </member>
+        <member name="M:RayGame.Mesh.#ctor(System.Numerics.Vector2[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:RayGame.Mesh"/> class with an array of vertices specified as <see cref="T:System.Numerics.Vector2"/>.
+            </summary>
+            <param name="vertexArray">An array of <see cref="T:System.Numerics.Vector2"/> representing the vertices of the mesh.</param>
+        </member>
+        <member name="M:RayGame.Mesh.AddVertices(System.Numerics.Vector2[])">
+            <summary>
+            Adds an array of vertices to the mesh.
+            </summary>
+            <param name="vertexArray">An array of <see cref="T:System.Numerics.Vector2"/> to add to the mesh.</param>
+        </member>
+        <member name="M:RayGame.Mesh.AddVertices(System.ValueTuple{System.Single,System.Single}[])">
+            <summary>
+            Adds an array of vertices to the mesh specified as tuples.
+            </summary>
+            <param name="vertexArray">An array of tuples representing the vertices to add to the mesh.</param>
+        </member>
+        <member name="M:RayGame.Mesh.AddVertex(System.Numerics.Vector2)">
+            <summary>
+            Adds a single vertex to the mesh.
+            </summary>
+            <param name="vertex">The vertex to add to the mesh.</param>
+        </member>
+        <member name="M:RayGame.Mesh.AddVertex(System.ValueTuple{System.Single,System.Single})">
+            <summary>
+            Adds a single vertex to the mesh specified as a tuple.
+            </summary>
+            <param name="vertex">The vertex to add to the mesh.</param>
+        </member>
+        <member name="M:RayGame.Mesh.ShiftMesh(System.Numerics.Vector2)">
+            <summary>
+            Shifts the entire mesh by the specified offset in Position.
+            </summary>
+            <param name="Offset">The offset by which to shift the mesh.</param>
+            <returns>The shifted mesh.</returns>
+        </member>
+        <member name="M:RayGame.Mesh.ShiftMesh(System.ValueTuple{System.Single,System.Single})">
+            <summary>
+            Shifts the entire mesh by the specified offset in Position.
+            </summary>
+            <param name="Offset">The offset specified as a tuple by which to shift the mesh.</param>
+            <returns>The shifted mesh.</returns>
+        </member>
+        <member name="M:RayGame.Mesh.RotateMesh(System.Single)">
+            <summary>
+            Rotates the entire mesh by the specified angle.
+            </summary>
+            <param name="Angle">The angle in degrees by which to rotate the mesh.</param>
+            <returns>The rotated mesh.</returns>
+        </member>
+        <member name="M:RayGame.Mesh.ScaleMesh(System.Single)">
+            <summary>
+            Scales the entire mesh by the specified scale factor.
+            </summary>
+            <param name="Scale">The scale factor by which to scale the mesh.</param>
+            <returns>The scaled mesh.</returns>
+        </member>
+        <member name="M:RayGame.Mesh.GetVertexArray">
+            <summary>
+            Gets the vertices of the mesh as an array.
+            </summary>
+            <returns>An array of <see cref="T:System.Numerics.Vector2"/> representing the vertices of the mesh.</returns>
+        </member>
+        <member name="M:RayGame.Mesh.DeleteVertex(System.Int32)">
+            <summary>
+            Deletes a vertex at the specified index.
+            </summary>
+            <param name="Index">The index of the vertex to delete.</param>
+        </member>
+        <member name="M:RayGame.Mesh.DeleteLastVertex">
+            <summary>
+            Deletes a Vertex from the last position.
+            </summary>
+        </member>
+        <member name="M:RayGame.Mesh.DeleteVertex(System.ValueTuple{System.Single,System.Single})">
+            <summary>
+            Deletes a vertex that matches the specified point.
+            </summary>
+            <param name="point">The point representing the vertex to delete.</param>
+        </member>
+        <member name="M:RayGame.Mesh.InsertVertex(System.Int32,System.Numerics.Vector2)">
+            <summary>
+            Inserts a vertex at the specified index.
+            </summary>
+            <param name="Index">The index at which to insert the vertex.</param>
+            <param name="Vertex">The vertex to insert.</param>
+        </member>
+        <member name="T:RayGame.MeshRenderer">
+            <summary>
+            A Renderer that renders a <see cref="T:RayGame.Mesh"/> associated with a <see cref="T:RayGame.GameObject"/>.
+            </summary>
+        </member>
+        <member name="P:RayGame.MeshRenderer.Container">
+            <summary>
+            The Container is the reference to the <see cref="T:RayGame.GameObject"/> it is connected to.
+            </summary>
+        </member>
+        <member name="M:RayGame.MeshRenderer.Start">
+            <summary>
+            Initializes the renderer. This method is called when the renderer is first added to a <see cref="T:RayGame.GameObject"/>.
+            </summary>
+        </member>
+        <member name="M:RayGame.MeshRenderer.Update">
+            <summary>
+            Updates the renderer. This method is called once per frame.
+            </summary>
+        </member>
+        <member name="M:RayGame.MeshRenderer.SetMesh(RayGame.Mesh)">
+            <summary>
+            Sets the mesh to be rendered.
+            </summary>
+            <param name="mesh">The <see cref="T:RayGame.Mesh"/> to set.</param>
+            <returns>The <see cref="T:RayGame.Mesh"/> that was set.</returns>
+        </member>
+        <member name="M:RayGame.MeshRenderer.GetMesh">
+            <summary>
+            Gets the mesh being rendered.
+            </summary>
+            <returns>The <see cref="T:RayGame.Mesh"/> being rendered.</returns>
+        </member>
+        <member name="M:RayGame.MeshRenderer.RenderMesh(System.Numerics.Vector2[],Raylib_cs.Color)">
+            <summary>
+            Renders the specified vertices as lines with the given color. **Primarily for internal use**
+            </summary>
+            <param name="Vertices">An array of <see cref="T:System.Numerics.Vector2"/> representing the vertices of the mesh.</param>
+            <param name="color">The color to use for rendering the lines.</param>
+        </member>
+    </members>
+</doc>

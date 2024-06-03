@@ -1,4 +1,10 @@
-- name: Introduction
-  href: introduction.md
+- name: Installation
+  href: Installation.md
 - name: Getting Started
-  href: getting-started.md
+  href: Getting_Started.md
+- name: Adding Components
+  href: Components.md
+- name: Hello Square
+  href: Hello_Square.md
+- name: Getting Better
+  href: Opts.md

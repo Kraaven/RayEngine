@@ -22,7 +22,7 @@ items:
       repo: https://github.com/Kraaven/RayEngine.git
     id: Bird
     path: ../RayGame/Demo/Bird.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - RayGame
   namespace: RayGame.Demo
@@ -59,7 +59,7 @@ items:
       repo: https://github.com/Kraaven/RayEngine.git
     id: Container
     path: ../RayGame/Demo/Bird.cs
-    startLine: 15
+    startLine: 17
   assemblies:
   - RayGame
   namespace: RayGame.Demo
@@ -92,7 +92,7 @@ items:
       repo: https://github.com/Kraaven/RayEngine.git
     id: Start
     path: ../RayGame/Demo/Bird.cs
-    startLine: 17
+    startLine: 19
   assemblies:
   - RayGame
   namespace: RayGame.Demo
@@ -122,7 +122,7 @@ items:
       repo: https://github.com/Kraaven/RayEngine.git
     id: Update
     path: ../RayGame/Demo/Bird.cs
-    startLine: 32
+    startLine: 39
   assemblies:
   - RayGame
   namespace: RayGame.Demo

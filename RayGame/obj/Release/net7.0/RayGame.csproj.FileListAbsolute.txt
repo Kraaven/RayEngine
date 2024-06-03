@@ -20,3 +20,4 @@ C:\Users\dhruv\RiderProjects\RayGame\RayGame\obj\Release\net7.0\refint\RayGame.d
 C:\Users\dhruv\RiderProjects\RayGame\RayGame\obj\Release\net7.0\RayGame.pdb
 C:\Users\dhruv\RiderProjects\RayGame\RayGame\obj\Release\net7.0\RayGame.genruntimeconfig.cache
 C:\Users\dhruv\RiderProjects\RayGame\RayGame\obj\Release\net7.0\ref\RayGame.dll
+C:\Users\dhruv\RiderProjects\RayGame\RayGame\bin\Release\net7.0\RayGame.xml
