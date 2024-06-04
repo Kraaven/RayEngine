@@ -61,6 +61,7 @@ public class MeshRenderer : IRenderer
     /// </summary>
     /// <param name="Vertices">An array of <see cref="Vector2"/> representing the vertices of the mesh.</param>
     /// <param name="color">The color to use for rendering the lines.</param>
+    /// <exclude />
     public static void RenderMesh(Vector2[] Vertices, Color color)
     {
         Raylib.DrawLineV(Vertices[^1], Vertices[0], color);
