@@ -15,5 +15,5 @@ Luckily, Raylib has a special repository called [RayLib_cs](https://github.com/C
 
 So after a lot of Reading, and writing code, i finally finished what is arguably 1.0 of the _RayEngine_.Opting for inspiration from the Unity Engine, and writing a lot of code to abstract away all the RayLib, into my framwork that is very Object orientated in nature.
 
-Above you can find the Docs above, along with the API to reffer when developing games on this Engine.
+To the side, you can find the dedicated Documentation as well as API, Good Luck!
 Chao!

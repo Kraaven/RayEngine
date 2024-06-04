@@ -2,7 +2,7 @@
 
 - Along with what i have shown you, there are other features like collision, that you need to find and learn by yourself.
 - You can do that by checking out the API section next to the Docs that you are reading.
-- In said API, all Classes and methods have a </> next to it, clicking it will take you to the source code for said Class/ Method.
+- In said API, all Classes and methods have a an option to *View Source* next to it, clicking it will take you to the source code for said Class/ Method.
 - The Plethora of methods available should let you do a variety of things, and i am open to adding more if requested.
 - That being said, I have made a very basic version of Flappy bird, which you can check out by doing
 ```csharp
