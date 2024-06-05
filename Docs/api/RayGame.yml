@@ -11,6 +11,7 @@ items:
   - RayGame.IRenderer
   - RayGame.Mesh
   - RayGame.MeshRenderer
+  - RayGame.SpriteRenderer
   - RayGame.Transform
   langs:
   - csharp
@@ -75,6 +76,12 @@ references:
   name: MeshRenderer
   nameWithType: MeshRenderer
   fullName: RayGame.MeshRenderer
+- uid: RayGame.SpriteRenderer
+  commentId: T:RayGame.SpriteRenderer
+  href: RayGame.SpriteRenderer.html
+  name: SpriteRenderer
+  nameWithType: SpriteRenderer
+  fullName: RayGame.SpriteRenderer
 - uid: RayGame
   commentId: N:RayGame
   href: RayGame.html

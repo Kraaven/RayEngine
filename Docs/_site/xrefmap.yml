@@ -978,22 +978,6 @@ references:
   isSpec: "True"
   fullName: RayGame.MeshRenderer.GetMesh
   nameWithType: MeshRenderer.GetMesh
-- uid: RayGame.MeshRenderer.RenderMesh(System.Numerics.Vector2[],Raylib_cs.Color)
-  name: RenderMesh(Vector2[], Color)
-  href: api/RayGame.MeshRenderer.html#RayGame_MeshRenderer_RenderMesh_System_Numerics_Vector2___Raylib_cs_Color_
-  commentId: M:RayGame.MeshRenderer.RenderMesh(System.Numerics.Vector2[],Raylib_cs.Color)
-  name.vb: RenderMesh(Vector2(), Color)
-  fullName: RayGame.MeshRenderer.RenderMesh(System.Numerics.Vector2[], Raylib_cs.Color)
-  fullName.vb: RayGame.MeshRenderer.RenderMesh(System.Numerics.Vector2(), Raylib_cs.Color)
-  nameWithType: MeshRenderer.RenderMesh(Vector2[], Color)
-  nameWithType.vb: MeshRenderer.RenderMesh(Vector2(), Color)
-- uid: RayGame.MeshRenderer.RenderMesh*
-  name: RenderMesh
-  href: api/RayGame.MeshRenderer.html#RayGame_MeshRenderer_RenderMesh_
-  commentId: Overload:RayGame.MeshRenderer.RenderMesh
-  isSpec: "True"
-  fullName: RayGame.MeshRenderer.RenderMesh
-  nameWithType: MeshRenderer.RenderMesh
 - uid: RayGame.MeshRenderer.SetMesh(RayGame.Mesh)
   name: SetMesh(Mesh)
   href: api/RayGame.MeshRenderer.html#RayGame_MeshRenderer_SetMesh_RayGame_Mesh_
@@ -1033,6 +1017,83 @@ references:
   isSpec: "True"
   fullName: RayGame.MeshRenderer.Update
   nameWithType: MeshRenderer.Update
+- uid: RayGame.SpriteRenderer
+  name: SpriteRenderer
+  href: api/RayGame.SpriteRenderer.html
+  commentId: T:RayGame.SpriteRenderer
+  fullName: RayGame.SpriteRenderer
+  nameWithType: SpriteRenderer
+- uid: RayGame.SpriteRenderer.Container
+  name: Container
+  href: api/RayGame.SpriteRenderer.html#RayGame_SpriteRenderer_Container
+  commentId: P:RayGame.SpriteRenderer.Container
+  fullName: RayGame.SpriteRenderer.Container
+  nameWithType: SpriteRenderer.Container
+- uid: RayGame.SpriteRenderer.Container*
+  name: Container
+  href: api/RayGame.SpriteRenderer.html#RayGame_SpriteRenderer_Container_
+  commentId: Overload:RayGame.SpriteRenderer.Container
+  isSpec: "True"
+  fullName: RayGame.SpriteRenderer.Container
+  nameWithType: SpriteRenderer.Container
+- uid: RayGame.SpriteRenderer.GetSprite
+  name: GetSprite()
+  href: api/RayGame.SpriteRenderer.html#RayGame_SpriteRenderer_GetSprite
+  commentId: M:RayGame.SpriteRenderer.GetSprite
+  fullName: RayGame.SpriteRenderer.GetSprite()
+  nameWithType: SpriteRenderer.GetSprite()
+- uid: RayGame.SpriteRenderer.GetSprite*
+  name: GetSprite
+  href: api/RayGame.SpriteRenderer.html#RayGame_SpriteRenderer_GetSprite_
+  commentId: Overload:RayGame.SpriteRenderer.GetSprite
+  isSpec: "True"
+  fullName: RayGame.SpriteRenderer.GetSprite
+  nameWithType: SpriteRenderer.GetSprite
+- uid: RayGame.SpriteRenderer.SetSprite(Raylib_cs.Texture2D)
+  name: SetSprite(Texture2D)
+  href: api/RayGame.SpriteRenderer.html#RayGame_SpriteRenderer_SetSprite_Raylib_cs_Texture2D_
+  commentId: M:RayGame.SpriteRenderer.SetSprite(Raylib_cs.Texture2D)
+  fullName: RayGame.SpriteRenderer.SetSprite(Raylib_cs.Texture2D)
+  nameWithType: SpriteRenderer.SetSprite(Texture2D)
+- uid: RayGame.SpriteRenderer.SetSprite*
+  name: SetSprite
+  href: api/RayGame.SpriteRenderer.html#RayGame_SpriteRenderer_SetSprite_
+  commentId: Overload:RayGame.SpriteRenderer.SetSprite
+  isSpec: "True"
+  fullName: RayGame.SpriteRenderer.SetSprite
+  nameWithType: SpriteRenderer.SetSprite
+- uid: RayGame.SpriteRenderer.Start
+  name: Start()
+  href: api/RayGame.SpriteRenderer.html#RayGame_SpriteRenderer_Start
+  commentId: M:RayGame.SpriteRenderer.Start
+  fullName: RayGame.SpriteRenderer.Start()
+  nameWithType: SpriteRenderer.Start()
+- uid: RayGame.SpriteRenderer.Start*
+  name: Start
+  href: api/RayGame.SpriteRenderer.html#RayGame_SpriteRenderer_Start_
+  commentId: Overload:RayGame.SpriteRenderer.Start
+  isSpec: "True"
+  fullName: RayGame.SpriteRenderer.Start
+  nameWithType: SpriteRenderer.Start
+- uid: RayGame.SpriteRenderer.Update
+  name: Update()
+  href: api/RayGame.SpriteRenderer.html#RayGame_SpriteRenderer_Update
+  commentId: M:RayGame.SpriteRenderer.Update
+  fullName: RayGame.SpriteRenderer.Update()
+  nameWithType: SpriteRenderer.Update()
+- uid: RayGame.SpriteRenderer.Update*
+  name: Update
+  href: api/RayGame.SpriteRenderer.html#RayGame_SpriteRenderer_Update_
+  commentId: Overload:RayGame.SpriteRenderer.Update
+  isSpec: "True"
+  fullName: RayGame.SpriteRenderer.Update
+  nameWithType: SpriteRenderer.Update
+- uid: RayGame.SpriteRenderer.transform
+  name: transform
+  href: api/RayGame.SpriteRenderer.html#RayGame_SpriteRenderer_transform
+  commentId: F:RayGame.SpriteRenderer.transform
+  fullName: RayGame.SpriteRenderer.transform
+  nameWithType: SpriteRenderer.transform
 - uid: RayGame.Transform
   name: Transform
   href: api/RayGame.Transform.html

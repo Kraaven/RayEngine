@@ -122,6 +122,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RayGame.SpriteRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RayGame.SpriteRenderer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RayGame.Transform.yml",
       "output": {
         ".html": {
@@ -222,6 +232,16 @@
       "output": {
         ".html": {
           "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "templates/SingulinkFX-3.0.2/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "templates/SingulinkFX-3.0.2/README.html"
         }
       },
       "version": ""

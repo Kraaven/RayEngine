@@ -3,9 +3,9 @@
   <div>
     <div class="sidefilter">
       <form class="toc-filter">
-        <span class="glyphicon glyphicon-filter filter-icon"></span>
-        <span class="glyphicon glyphicon-remove clear-icon" id="toc_filter_clear"></span>
-        <input type="text" id="toc_filter_input" placeholder="Filter by title" onkeypress="if(event.keyCode==13) {return false;}">
+        <i class="bi bi-funnel-fill filter-icon"></i>
+        <i id="toc_filter_clear" class="bi bi-x-lg clear-icon"></i>
+        <input type="text" id="toc_filter_input" placeholder="Filter by title" autocomplete="off" onkeypress="if(event.keyCode==13) {return false;}">
       </form>
     </div>
     <div class="sidetoc">
@@ -13,19 +13,24 @@
 
           <ul class="nav level1">
                 <li>
-                    <a href="Installation.html" name="" title="Installation">Installation</a>
+                      <a href="Installation.html" class="sidebar-item" name="" title="Installation">Installation</a>
+        
                 </li>
                 <li>
-                    <a href="Getting_Started.html" name="" title="Getting Started">Getting Started</a>
+                      <a href="Getting_Started.html" class="sidebar-item" name="" title="Getting Started">Getting Started</a>
+        
                 </li>
                 <li>
-                    <a href="Components.html" name="" title="Adding Components">Adding Components</a>
+                      <a href="Components.html" class="sidebar-item" name="" title="Adding Components">Adding Components</a>
+        
                 </li>
                 <li>
-                    <a href="Hello_Square.html" name="" title="Hello Square">Hello Square</a>
+                      <a href="Hello_Square.html" class="sidebar-item" name="" title="Hello Square">Hello Square</a>
+        
                 </li>
                 <li>
-                    <a href="Opts.html" name="" title="Getting Better">Getting Better</a>
+                      <a href="Opts.html" class="sidebar-item" name="" title="Getting Better">Getting Better</a>
+        
                 </li>
           </ul>
       </div>

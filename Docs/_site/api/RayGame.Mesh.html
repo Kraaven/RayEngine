@@ -1,129 +1,119 @@
 ﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
 <html>
-  <head>
-    <meta charset="utf-8">
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Class Mesh
  </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class Mesh
  ">
-      
-      
-      <link rel="icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../public/docfx.min.css">
-      <link rel="stylesheet" href="../public/main.css">
-      <meta name="docfx:navrel" content="../toc.html">
-      <meta name="docfx:tocrel" content="toc.html">
-      
-      <meta name="docfx:rel" content="../">
-      
-      
-      <meta name="docfx:docurl" content="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh.md&amp;value=---%0Auid%3A%20RayGame.Mesh%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
-      <meta name="loc:inThisArticle" content="In this article">
-      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
-      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
-      <meta name="loc:tocFilter" content="Filter by title">
-      <meta name="loc:nextArticle" content="Next">
-      <meta name="loc:prevArticle" content="Previous">
-      <meta name="loc:themeLight" content="Light">
-      <meta name="loc:themeDark" content="Dark">
-      <meta name="loc:themeAuto" content="Auto">
-      <meta name="loc:changeTheme" content="Change theme">
-      <meta name="loc:copy" content="Copy">
-      <meta name="loc:downloadPdf" content="Download PDF">
-  </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../styles/config.css">
+      <link rel="stylesheet" href="../styles/singulink.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+    </head>
+    <body>
+        <!-- Header required for docfx anchor scroll to work -->
+        <header id="head"></header>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
 
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
-    <header class="bg-body border-bottom">
-      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
-        <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../logo.svg" alt="">
-            
-          </a>
-          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-three-dots"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navpanel">
-            <div id="navbar">
-              <form class="search" role="search" id="search">
-                <i class="bi bi-search"></i>
-                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
-              </form>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+            <a class="brand" href="../index.html">
+              <img src="../logo.svg" alt="" class="logomark">
+              <span class="brand-title"></span>
+            </a>        </div>
 
-    <main class="container-xxl">
-      <div class="toc-offcanvas">
-        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <nav class="toc" id="toc"></nav>
-          </div>
-        </div>
-      </div>
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
 
-      <div class="content">
-        <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
-            <i class="bi bi-list"></i>
-          </button>
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
 
-          <nav id="breadcrumb"></nav>
-        </div>
+                    <div>
+                      <div class="mobile-hide">
 
-        <article data-uid="RayGame.Mesh">
+                        <a class="brand" href="../index.html">
+                          <img src="../logo.svg" alt="" class="logomark">
+                          <span class="brand-title"></span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                               <a href="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh.md&amp;value=---%0Auid%3A%20RayGame.Mesh%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="RayGame.Mesh">
 
 
 
-  <h1 id="RayGame_Mesh" data-uid="RayGame.Mesh" class="text-break">
-    Class Mesh
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L16"><i class="bi bi-code-slash"></i></a>
-  </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="RayGame.html">RayGame</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>RayGame.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>Represents a 2D mesh consisting of a collection of vertices.</p>
+  <h1 id="RayGame_Mesh" data-uid="RayGame.Mesh" class="text-break">Class Mesh
+</h1>
+  <div class="markdown level0 summary"><p>Represents a 2D mesh consisting of a collection of vertices.</p>
 </div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Mesh</code></pre>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">Mesh</span></div>
   </div>
-
-
-
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">Mesh</span></div>
-    </dd>
-  </dl>
-
-
-
-  <dl class="typelist derived">
-    <dt>Inherited Members</dt>
-    <dd>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -145,564 +135,598 @@
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
-  </dd></dl>
-
-
-
-
-  <h2 id="RayGame_Mesh_remarks">Remarks</h2>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="RayGame.html">RayGame</a></h6>
+  <h6><strong>Assembly</strong>: RayGame.dll</h6>
+  <h5 id="RayGame_Mesh_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Mesh</code></pre>
+  </div>
+  <h5 id="RayGame_Mesh_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>A Mesh is a collection of Vertices that is used to display/render anything. It is always a closed loop. The Mesh also have functions that can edit it, however, be careful, as all modifications as <em>permanent</em>.
 It is Attached to a <a class="xref" href="RayGame.MeshRenderer.html">MeshRenderer</a> to be viewed at the <a class="xref" href="RayGame.GameObject.html">GameObject</a>'s Position. The vertices themselves are always represented in local space.</p>
 </div>
-
-
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh__ctor_System_Numerics_Vector2___.md&amp;value=---%0Auid%3A%20RayGame.Mesh.%23ctor(System.Numerics.Vector2%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L34">View Source</a>
+  </span>
   <a id="RayGame_Mesh__ctor_" data-uid="RayGame.Mesh.#ctor*"></a>
-
-  <h3 id="RayGame_Mesh__ctor_System_Numerics_Vector2___" data-uid="RayGame.Mesh.#ctor(System.Numerics.Vector2[])">
-  Mesh(Vector2[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L34"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="RayGame_Mesh__ctor_System_Numerics_Vector2___" data-uid="RayGame.Mesh.#ctor(System.Numerics.Vector2[])">Mesh(Vector2[])</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="RayGame.Mesh.html">Mesh</a> class with an array of vertices specified as <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Mesh(Vector2[] vertexArray)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>vertexArray</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>[]</dt>
-    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a> representing the vertices of the mesh.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>[]</td>
+        <td><span class="parametername">vertexArray</span></td>
+        <td><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a> representing the vertices of the mesh.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh__ctor_System_ValueTuple_System_Single_System_Single____.md&amp;value=---%0Auid%3A%20RayGame.Mesh.%23ctor(System.ValueTuple%7BSystem.Single%2CSystem.Single%7D%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L25">View Source</a>
+  </span>
   <a id="RayGame_Mesh__ctor_" data-uid="RayGame.Mesh.#ctor*"></a>
-
-  <h3 id="RayGame_Mesh__ctor_System_ValueTuple_System_Single_System_Single____" data-uid="RayGame.Mesh.#ctor(System.ValueTuple{System.Single,System.Single}[])">
-  Mesh((float, float)[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L25"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="RayGame_Mesh__ctor_System_ValueTuple_System_Single_System_Single____" data-uid="RayGame.Mesh.#ctor(System.ValueTuple{System.Single,System.Single}[])">Mesh((float, float)[])</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="RayGame.Mesh.html">Mesh</a> class with an array of vertices specified as tuples.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Mesh((float, float)[] vertexArray)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>vertexArray</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>)[]</dt>
-    <dd><p>An array of tuples representing the vertices of the mesh.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>)[]</td>
+        <td><span class="parametername">vertexArray</span></td>
+        <td><p>An array of tuples representing the vertices of the mesh.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh_AddVertex_System_Numerics_Vector2_.md&amp;value=---%0Auid%3A%20RayGame.Mesh.AddVertex(System.Numerics.Vector2)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L61">View Source</a>
+  </span>
   <a id="RayGame_Mesh_AddVertex_" data-uid="RayGame.Mesh.AddVertex*"></a>
-
-  <h3 id="RayGame_Mesh_AddVertex_System_Numerics_Vector2_" data-uid="RayGame.Mesh.AddVertex(System.Numerics.Vector2)">
-  AddVertex(Vector2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L61"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="RayGame_Mesh_AddVertex_System_Numerics_Vector2_" data-uid="RayGame.Mesh.AddVertex(System.Numerics.Vector2)">AddVertex(Vector2)</h4>
   <div class="markdown level1 summary"><p>Adds a single vertex to the mesh.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void AddVertex(Vector2 vertex)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>vertex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></dt>
-    <dd><p>The vertex to add to the mesh.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex to add to the mesh.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh_AddVertex_System_ValueTuple_System_Single_System_Single__.md&amp;value=---%0Auid%3A%20RayGame.Mesh.AddVertex(System.ValueTuple%7BSystem.Single%2CSystem.Single%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L70">View Source</a>
+  </span>
   <a id="RayGame_Mesh_AddVertex_" data-uid="RayGame.Mesh.AddVertex*"></a>
-
-  <h3 id="RayGame_Mesh_AddVertex_System_ValueTuple_System_Single_System_Single__" data-uid="RayGame.Mesh.AddVertex(System.ValueTuple{System.Single,System.Single})">
-  AddVertex((float, float))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L70"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="RayGame_Mesh_AddVertex_System_ValueTuple_System_Single_System_Single__" data-uid="RayGame.Mesh.AddVertex(System.ValueTuple{System.Single,System.Single})">AddVertex((float, float))</h4>
   <div class="markdown level1 summary"><p>Adds a single vertex to the mesh specified as a tuple.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void AddVertex((float, float) vertex)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>vertex</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>)</dt>
-    <dd><p>The vertex to add to the mesh.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>)</td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex to add to the mesh.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh_AddVertices_System_Numerics_Vector2___.md&amp;value=---%0Auid%3A%20RayGame.Mesh.AddVertices(System.Numerics.Vector2%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L43">View Source</a>
+  </span>
   <a id="RayGame_Mesh_AddVertices_" data-uid="RayGame.Mesh.AddVertices*"></a>
-
-  <h3 id="RayGame_Mesh_AddVertices_System_Numerics_Vector2___" data-uid="RayGame.Mesh.AddVertices(System.Numerics.Vector2[])">
-  AddVertices(Vector2[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L43"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="RayGame_Mesh_AddVertices_System_Numerics_Vector2___" data-uid="RayGame.Mesh.AddVertices(System.Numerics.Vector2[])">AddVertices(Vector2[])</h4>
   <div class="markdown level1 summary"><p>Adds an array of vertices to the mesh.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void AddVertices(Vector2[] vertexArray)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>vertexArray</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>[]</dt>
-    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a> to add to the mesh.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>[]</td>
+        <td><span class="parametername">vertexArray</span></td>
+        <td><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a> to add to the mesh.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh_AddVertices_System_ValueTuple_System_Single_System_Single____.md&amp;value=---%0Auid%3A%20RayGame.Mesh.AddVertices(System.ValueTuple%7BSystem.Single%2CSystem.Single%7D%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L52">View Source</a>
+  </span>
   <a id="RayGame_Mesh_AddVertices_" data-uid="RayGame.Mesh.AddVertices*"></a>
-
-  <h3 id="RayGame_Mesh_AddVertices_System_ValueTuple_System_Single_System_Single____" data-uid="RayGame.Mesh.AddVertices(System.ValueTuple{System.Single,System.Single}[])">
-  AddVertices((float, float)[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L52"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="RayGame_Mesh_AddVertices_System_ValueTuple_System_Single_System_Single____" data-uid="RayGame.Mesh.AddVertices(System.ValueTuple{System.Single,System.Single}[])">AddVertices((float, float)[])</h4>
   <div class="markdown level1 summary"><p>Adds an array of vertices to the mesh specified as tuples.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void AddVertices((float, float)[] vertexArray)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>vertexArray</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>)[]</dt>
-    <dd><p>An array of tuples representing the vertices to add to the mesh.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>)[]</td>
+        <td><span class="parametername">vertexArray</span></td>
+        <td><p>An array of tuples representing the vertices to add to the mesh.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh_DeleteLastVertex.md&amp;value=---%0Auid%3A%20RayGame.Mesh.DeleteLastVertex%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L152">View Source</a>
+  </span>
   <a id="RayGame_Mesh_DeleteLastVertex_" data-uid="RayGame.Mesh.DeleteLastVertex*"></a>
-
-  <h3 id="RayGame_Mesh_DeleteLastVertex" data-uid="RayGame.Mesh.DeleteLastVertex">
-  DeleteLastVertex()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L152"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="RayGame_Mesh_DeleteLastVertex" data-uid="RayGame.Mesh.DeleteLastVertex">DeleteLastVertex()</h4>
   <div class="markdown level1 summary"><p>Deletes a Vertex from the last position.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void DeleteLastVertex()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh_DeleteVertex_System_Int32_.md&amp;value=---%0Auid%3A%20RayGame.Mesh.DeleteVertex(System.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L144">View Source</a>
+  </span>
   <a id="RayGame_Mesh_DeleteVertex_" data-uid="RayGame.Mesh.DeleteVertex*"></a>
-
-  <h3 id="RayGame_Mesh_DeleteVertex_System_Int32_" data-uid="RayGame.Mesh.DeleteVertex(System.Int32)">
-  DeleteVertex(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L144"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="RayGame_Mesh_DeleteVertex_System_Int32_" data-uid="RayGame.Mesh.DeleteVertex(System.Int32)">DeleteVertex(int)</h4>
   <div class="markdown level1 summary"><p>Deletes a vertex at the specified index.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void DeleteVertex(int Index)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>Index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The index of the vertex to delete.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">Index</span></td>
+        <td><p>The index of the vertex to delete.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh_DeleteVertex_System_ValueTuple_System_Single_System_Single__.md&amp;value=---%0Auid%3A%20RayGame.Mesh.DeleteVertex(System.ValueTuple%7BSystem.Single%2CSystem.Single%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L161">View Source</a>
+  </span>
   <a id="RayGame_Mesh_DeleteVertex_" data-uid="RayGame.Mesh.DeleteVertex*"></a>
-
-  <h3 id="RayGame_Mesh_DeleteVertex_System_ValueTuple_System_Single_System_Single__" data-uid="RayGame.Mesh.DeleteVertex(System.ValueTuple{System.Single,System.Single})">
-  DeleteVertex((float, float))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L161"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="RayGame_Mesh_DeleteVertex_System_ValueTuple_System_Single_System_Single__" data-uid="RayGame.Mesh.DeleteVertex(System.ValueTuple{System.Single,System.Single})">DeleteVertex((float, float))</h4>
   <div class="markdown level1 summary"><p>Deletes a vertex that matches the specified point.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void DeleteVertex((float, float) point)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>point</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>)</dt>
-    <dd><p>The point representing the vertex to delete.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>)</td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point representing the vertex to delete.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh_GetVertexArray.md&amp;value=---%0Auid%3A%20RayGame.Mesh.GetVertexArray%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L135">View Source</a>
+  </span>
   <a id="RayGame_Mesh_GetVertexArray_" data-uid="RayGame.Mesh.GetVertexArray*"></a>
-
-  <h3 id="RayGame_Mesh_GetVertexArray" data-uid="RayGame.Mesh.GetVertexArray">
-  GetVertexArray()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L135"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="RayGame_Mesh_GetVertexArray" data-uid="RayGame.Mesh.GetVertexArray">GetVertexArray()</h4>
   <div class="markdown level1 summary"><p>Gets the vertices of the mesh as an array.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Vector2[] GetVertexArray()</code></pre>
   </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>[]</dt>
-    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a> representing the vertices of the mesh.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>[]</td>
+        <td><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a> representing the vertices of the mesh.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh_InsertVertex_System_Int32_System_Numerics_Vector2_.md&amp;value=---%0Auid%3A%20RayGame.Mesh.InsertVertex(System.Int32%2CSystem.Numerics.Vector2)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L172">View Source</a>
+  </span>
   <a id="RayGame_Mesh_InsertVertex_" data-uid="RayGame.Mesh.InsertVertex*"></a>
-
-  <h3 id="RayGame_Mesh_InsertVertex_System_Int32_System_Numerics_Vector2_" data-uid="RayGame.Mesh.InsertVertex(System.Int32,System.Numerics.Vector2)">
-  InsertVertex(int, Vector2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L172"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="RayGame_Mesh_InsertVertex_System_Int32_System_Numerics_Vector2_" data-uid="RayGame.Mesh.InsertVertex(System.Int32,System.Numerics.Vector2)">InsertVertex(int, Vector2)</h4>
   <div class="markdown level1 summary"><p>Inserts a vertex at the specified index.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void InsertVertex(int Index, Vector2 Vertex)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>Index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The index at which to insert the vertex.</p>
-</dd>
-    <dt><code>Vertex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></dt>
-    <dd><p>The vertex to insert.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">Index</span></td>
+        <td><p>The index at which to insert the vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></td>
+        <td><span class="parametername">Vertex</span></td>
+        <td><p>The vertex to insert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh_RotateMesh_System_Single_.md&amp;value=---%0Auid%3A%20RayGame.Mesh.RotateMesh(System.Single)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L104">View Source</a>
+  </span>
   <a id="RayGame_Mesh_RotateMesh_" data-uid="RayGame.Mesh.RotateMesh*"></a>
-
-  <h3 id="RayGame_Mesh_RotateMesh_System_Single_" data-uid="RayGame.Mesh.RotateMesh(System.Single)">
-  RotateMesh(float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L104"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="RayGame_Mesh_RotateMesh_System_Single_" data-uid="RayGame.Mesh.RotateMesh(System.Single)">RotateMesh(float)</h4>
   <div class="markdown level1 summary"><p>Rotates the entire mesh by the specified angle.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Mesh RotateMesh(float Angle)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>Angle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The angle in degrees by which to rotate the mesh.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="RayGame.Mesh.html">Mesh</a></dt>
-    <dd><p>The rotated mesh.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><span class="parametername">Angle</span></td>
+        <td><p>The angle in degrees by which to rotate the mesh.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="RayGame.Mesh.html">Mesh</a></td>
+        <td><p>The rotated mesh.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh_ScaleMesh_System_Single_.md&amp;value=---%0Auid%3A%20RayGame.Mesh.ScaleMesh(System.Single)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L124">View Source</a>
+  </span>
   <a id="RayGame_Mesh_ScaleMesh_" data-uid="RayGame.Mesh.ScaleMesh*"></a>
-
-  <h3 id="RayGame_Mesh_ScaleMesh_System_Single_" data-uid="RayGame.Mesh.ScaleMesh(System.Single)">
-  ScaleMesh(float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L124"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="RayGame_Mesh_ScaleMesh_System_Single_" data-uid="RayGame.Mesh.ScaleMesh(System.Single)">ScaleMesh(float)</h4>
   <div class="markdown level1 summary"><p>Scales the entire mesh by the specified scale factor.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Mesh ScaleMesh(float Scale)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>Scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The scale factor by which to scale the mesh.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="RayGame.Mesh.html">Mesh</a></dt>
-    <dd><p>The scaled mesh.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><span class="parametername">Scale</span></td>
+        <td><p>The scale factor by which to scale the mesh.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="RayGame.Mesh.html">Mesh</a></td>
+        <td><p>The scaled mesh.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh_ShiftMesh_System_Numerics_Vector2_.md&amp;value=---%0Auid%3A%20RayGame.Mesh.ShiftMesh(System.Numerics.Vector2)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L80">View Source</a>
+  </span>
   <a id="RayGame_Mesh_ShiftMesh_" data-uid="RayGame.Mesh.ShiftMesh*"></a>
-
-  <h3 id="RayGame_Mesh_ShiftMesh_System_Numerics_Vector2_" data-uid="RayGame.Mesh.ShiftMesh(System.Numerics.Vector2)">
-  ShiftMesh(Vector2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L80"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="RayGame_Mesh_ShiftMesh_System_Numerics_Vector2_" data-uid="RayGame.Mesh.ShiftMesh(System.Numerics.Vector2)">ShiftMesh(Vector2)</h4>
   <div class="markdown level1 summary"><p>Shifts the entire mesh by the specified offset in Position.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Mesh ShiftMesh(Vector2 Offset)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>Offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></dt>
-    <dd><p>The offset by which to shift the mesh.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="RayGame.Mesh.html">Mesh</a></dt>
-    <dd><p>The shifted mesh.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></td>
+        <td><span class="parametername">Offset</span></td>
+        <td><p>The offset by which to shift the mesh.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="RayGame.Mesh.html">Mesh</a></td>
+        <td><p>The shifted mesh.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Kraaven/RayEngine/new/main/apiSpec/new?filename=RayGame_Mesh_ShiftMesh_System_ValueTuple_System_Single_System_Single__.md&amp;value=---%0Auid%3A%20RayGame.Mesh.ShiftMesh(System.ValueTuple%7BSystem.Single%2CSystem.Single%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L92">View Source</a>
+  </span>
   <a id="RayGame_Mesh_ShiftMesh_" data-uid="RayGame.Mesh.ShiftMesh*"></a>
-
-  <h3 id="RayGame_Mesh_ShiftMesh_System_ValueTuple_System_Single_System_Single__" data-uid="RayGame.Mesh.ShiftMesh(System.ValueTuple{System.Single,System.Single})">
-  ShiftMesh((float, float))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L92"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="RayGame_Mesh_ShiftMesh_System_ValueTuple_System_Single_System_Single__" data-uid="RayGame.Mesh.ShiftMesh(System.ValueTuple{System.Single,System.Single})">ShiftMesh((float, float))</h4>
   <div class="markdown level1 summary"><p>Shifts the entire mesh by the specified offset in Position.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Mesh ShiftMesh((float, float) Offset)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>Offset</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>)</dt>
-    <dd><p>The offset specified as a tuple by which to shift the mesh.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="RayGame.Mesh.html">Mesh</a></dt>
-    <dd><p>The shifted mesh.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>)</td>
+        <td><span class="parametername">Offset</span></td>
+        <td><p>The offset specified as a tuple by which to shift the mesh.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="RayGame.Mesh.html">Mesh</a></td>
+        <td><p>The shifted mesh.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 
 </article>
+                </div>
 
-        <div class="contribution d-print-none">
-          <a href="https://github.com/Kraaven/RayEngine/blob/main/RayGame/Mesh.cs/#L16" class="edit-link">Edit this page</a>
+            </main>
         </div>
 
 
-      </div>
-
-      <div class="affix">
-        <nav id="affix"></nav>
-      </div>
-    </main>
-
-    <div class="container-xxl search-results" id="search-results"></div>
-
-    <footer class="border-top text-secondary">
-      <div class="container-xxl">
-        <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
-        </div>
-      </div>
-    </footer>
-  </body>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../styles/docfx.js"></script>
+        <script type="text/javascript" src="../styles/main.js"></script>
+        <script type="text/javascript" src="../styles/singulink.js"></script>    </body>
 </html>

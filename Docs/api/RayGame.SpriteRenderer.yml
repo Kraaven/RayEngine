@@ -1,38 +1,37 @@
 ### YamlMime:ManagedReference
 items:
-- uid: RayGame.MeshRenderer
-  commentId: T:RayGame.MeshRenderer
-  id: MeshRenderer
+- uid: RayGame.SpriteRenderer
+  commentId: T:RayGame.SpriteRenderer
+  id: SpriteRenderer
   parent: RayGame
   children:
-  - RayGame.MeshRenderer.Container
-  - RayGame.MeshRenderer.GetMesh
-  - RayGame.MeshRenderer.SetMesh(RayGame.Mesh)
-  - RayGame.MeshRenderer.Start
-  - RayGame.MeshRenderer.Update
+  - RayGame.SpriteRenderer.Container
+  - RayGame.SpriteRenderer.GetSprite
+  - RayGame.SpriteRenderer.SetSprite(Raylib_cs.Texture2D)
+  - RayGame.SpriteRenderer.Start
+  - RayGame.SpriteRenderer.Update
+  - RayGame.SpriteRenderer.transform
   langs:
   - csharp
   - vb
-  name: MeshRenderer
-  nameWithType: MeshRenderer
-  fullName: RayGame.MeshRenderer
+  name: SpriteRenderer
+  nameWithType: SpriteRenderer
+  fullName: RayGame.SpriteRenderer
   type: Class
   source:
     remote:
       path: RayGame/Renderers.cs
       branch: main
       repo: https://github.com/Kraaven/RayEngine.git
-    id: MeshRenderer
+    id: SpriteRenderer
     path: ../RayGame/Renderers.cs
-    startLine: 12
+    startLine: 71
   assemblies:
   - RayGame
   namespace: RayGame
-  summary: A Renderer that renders a <xref href="RayGame.Mesh" data-throw-if-not-resolved="false"></xref> associated with a <xref href="RayGame.GameObject" data-throw-if-not-resolved="false"></xref>.
-  example: []
   syntax:
-    content: 'public class MeshRenderer : IRenderer'
-    content.vb: Public Class MeshRenderer Implements IRenderer
+    content: 'public class SpriteRenderer : IRenderer'
+    content.vb: Public Class SpriteRenderer Implements IRenderer
   inheritance:
   - System.Object
   implements:
@@ -45,16 +44,16 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: RayGame.MeshRenderer.Container
-  commentId: P:RayGame.MeshRenderer.Container
+- uid: RayGame.SpriteRenderer.Container
+  commentId: P:RayGame.SpriteRenderer.Container
   id: Container
-  parent: RayGame.MeshRenderer
+  parent: RayGame.SpriteRenderer
   langs:
   - csharp
   - vb
   name: Container
-  nameWithType: MeshRenderer.Container
-  fullName: RayGame.MeshRenderer.Container
+  nameWithType: SpriteRenderer.Container
+  fullName: RayGame.SpriteRenderer.Container
   type: Property
   source:
     remote:
@@ -63,7 +62,7 @@ items:
       repo: https://github.com/Kraaven/RayEngine.git
     id: Container
     path: ../RayGame/Renderers.cs
-    startLine: 19
+    startLine: 76
   assemblies:
   - RayGame
   namespace: RayGame
@@ -75,19 +74,46 @@ items:
     return:
       type: RayGame.GameObject
     content.vb: Public Property Container As GameObject
-  overload: RayGame.MeshRenderer.Container*
+  overload: RayGame.SpriteRenderer.Container*
   implements:
   - RayGame.IRenderer.Container
-- uid: RayGame.MeshRenderer.Start
-  commentId: M:RayGame.MeshRenderer.Start
+- uid: RayGame.SpriteRenderer.transform
+  commentId: F:RayGame.SpriteRenderer.transform
+  id: transform
+  parent: RayGame.SpriteRenderer
+  langs:
+  - csharp
+  - vb
+  name: transform
+  nameWithType: SpriteRenderer.transform
+  fullName: RayGame.SpriteRenderer.transform
+  type: Field
+  source:
+    remote:
+      path: RayGame/Renderers.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: transform
+    path: ../RayGame/Renderers.cs
+    startLine: 86
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  syntax:
+    content: public Transform transform
+    return:
+      type: RayGame.Transform
+    content.vb: Public transform As Transform
+- uid: RayGame.SpriteRenderer.Start
+  commentId: M:RayGame.SpriteRenderer.Start
   id: Start
-  parent: RayGame.MeshRenderer
+  parent: RayGame.SpriteRenderer
   langs:
   - csharp
   - vb
   name: Start()
-  nameWithType: MeshRenderer.Start()
-  fullName: RayGame.MeshRenderer.Start()
+  nameWithType: SpriteRenderer.Start()
+  fullName: RayGame.SpriteRenderer.Start()
   type: Method
   source:
     remote:
@@ -96,7 +122,7 @@ items:
       repo: https://github.com/Kraaven/RayEngine.git
     id: Start
     path: ../RayGame/Renderers.cs
-    startLine: 25
+    startLine: 91
   assemblies:
   - RayGame
   namespace: RayGame
@@ -105,19 +131,81 @@ items:
   syntax:
     content: public void Start()
     content.vb: Public Sub Start()
-  overload: RayGame.MeshRenderer.Start*
+  overload: RayGame.SpriteRenderer.Start*
   implements:
   - RayGame.IRenderer.Start
-- uid: RayGame.MeshRenderer.Update
-  commentId: M:RayGame.MeshRenderer.Update
+- uid: RayGame.SpriteRenderer.GetSprite
+  commentId: M:RayGame.SpriteRenderer.GetSprite
+  id: GetSprite
+  parent: RayGame.SpriteRenderer
+  langs:
+  - csharp
+  - vb
+  name: GetSprite()
+  nameWithType: SpriteRenderer.GetSprite()
+  fullName: RayGame.SpriteRenderer.GetSprite()
+  type: Method
+  source:
+    remote:
+      path: RayGame/Renderers.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: GetSprite
+    path: ../RayGame/Renderers.cs
+    startLine: 101
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Retrieves the current sprite texture.
+  example: []
+  syntax:
+    content: public Texture2D GetSprite()
+    return:
+      type: Raylib_cs.Texture2D
+      description: The current <xref href="Raylib_cs.Texture2D" data-throw-if-not-resolved="false"></xref> sprite.
+    content.vb: Public Function GetSprite() As Texture2D
+  overload: RayGame.SpriteRenderer.GetSprite*
+- uid: RayGame.SpriteRenderer.SetSprite(Raylib_cs.Texture2D)
+  commentId: M:RayGame.SpriteRenderer.SetSprite(Raylib_cs.Texture2D)
+  id: SetSprite(Raylib_cs.Texture2D)
+  parent: RayGame.SpriteRenderer
+  langs:
+  - csharp
+  - vb
+  name: SetSprite(Texture2D)
+  nameWithType: SpriteRenderer.SetSprite(Texture2D)
+  fullName: RayGame.SpriteRenderer.SetSprite(Raylib_cs.Texture2D)
+  type: Method
+  source:
+    remote:
+      path: RayGame/Renderers.cs
+      branch: main
+      repo: https://github.com/Kraaven/RayEngine.git
+    id: SetSprite
+    path: ../RayGame/Renderers.cs
+    startLine: 110
+  assemblies:
+  - RayGame
+  namespace: RayGame
+  summary: Sets the sprite texture.
+  example: []
+  syntax:
+    content: public void SetSprite(Texture2D ImputSprite)
+    parameters:
+    - id: ImputSprite
+      type: Raylib_cs.Texture2D
+    content.vb: Public Sub SetSprite(ImputSprite As Texture2D)
+  overload: RayGame.SpriteRenderer.SetSprite*
+- uid: RayGame.SpriteRenderer.Update
+  commentId: M:RayGame.SpriteRenderer.Update
   id: Update
-  parent: RayGame.MeshRenderer
+  parent: RayGame.SpriteRenderer
   langs:
   - csharp
   - vb
   name: Update()
-  nameWithType: MeshRenderer.Update()
-  fullName: RayGame.MeshRenderer.Update()
+  nameWithType: SpriteRenderer.Update()
+  fullName: RayGame.SpriteRenderer.Update()
   type: Method
   source:
     remote:
@@ -126,7 +214,7 @@ items:
       repo: https://github.com/Kraaven/RayEngine.git
     id: Update
     path: ../RayGame/Renderers.cs
-    startLine: 32
+    startLine: 120
   assemblies:
   - RayGame
   namespace: RayGame
@@ -135,90 +223,10 @@ items:
   syntax:
     content: public void Update()
     content.vb: Public Sub Update()
-  overload: RayGame.MeshRenderer.Update*
+  overload: RayGame.SpriteRenderer.Update*
   implements:
   - RayGame.IRenderer.Update
-- uid: RayGame.MeshRenderer.SetMesh(RayGame.Mesh)
-  commentId: M:RayGame.MeshRenderer.SetMesh(RayGame.Mesh)
-  id: SetMesh(RayGame.Mesh)
-  parent: RayGame.MeshRenderer
-  langs:
-  - csharp
-  - vb
-  name: SetMesh(Mesh)
-  nameWithType: MeshRenderer.SetMesh(Mesh)
-  fullName: RayGame.MeshRenderer.SetMesh(RayGame.Mesh)
-  type: Method
-  source:
-    remote:
-      path: RayGame/Renderers.cs
-      branch: main
-      repo: https://github.com/Kraaven/RayEngine.git
-    id: SetMesh
-    path: ../RayGame/Renderers.cs
-    startLine: 43
-  assemblies:
-  - RayGame
-  namespace: RayGame
-  summary: Sets the mesh to be rendered.
-  example: []
-  syntax:
-    content: public Mesh SetMesh(Mesh mesh)
-    parameters:
-    - id: mesh
-      type: RayGame.Mesh
-      description: The <xref href="RayGame.Mesh" data-throw-if-not-resolved="false"></xref> to set.
-    return:
-      type: RayGame.Mesh
-      description: The <xref href="RayGame.Mesh" data-throw-if-not-resolved="false"></xref> that was set.
-    content.vb: Public Function SetMesh(mesh As Mesh) As Mesh
-  overload: RayGame.MeshRenderer.SetMesh*
-- uid: RayGame.MeshRenderer.GetMesh
-  commentId: M:RayGame.MeshRenderer.GetMesh
-  id: GetMesh
-  parent: RayGame.MeshRenderer
-  langs:
-  - csharp
-  - vb
-  name: GetMesh()
-  nameWithType: MeshRenderer.GetMesh()
-  fullName: RayGame.MeshRenderer.GetMesh()
-  type: Method
-  source:
-    remote:
-      path: RayGame/Renderers.cs
-      branch: main
-      repo: https://github.com/Kraaven/RayEngine.git
-    id: GetMesh
-    path: ../RayGame/Renderers.cs
-    startLine: 53
-  assemblies:
-  - RayGame
-  namespace: RayGame
-  summary: Gets the mesh being rendered.
-  example: []
-  syntax:
-    content: public Mesh GetMesh()
-    return:
-      type: RayGame.Mesh
-      description: The <xref href="RayGame.Mesh" data-throw-if-not-resolved="false"></xref> being rendered.
-    content.vb: Public Function GetMesh() As Mesh
-  overload: RayGame.MeshRenderer.GetMesh*
 references:
-- uid: RayGame.Mesh
-  commentId: T:RayGame.Mesh
-  parent: RayGame
-  href: RayGame.Mesh.html
-  name: Mesh
-  nameWithType: Mesh
-  fullName: RayGame.Mesh
-- uid: RayGame.GameObject
-  commentId: T:RayGame.GameObject
-  parent: RayGame
-  href: RayGame.GameObject.html
-  name: GameObject
-  nameWithType: GameObject
-  fullName: RayGame.GameObject
 - uid: RayGame
   commentId: N:RayGame
   href: RayGame.html
@@ -469,12 +477,19 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: RayGame.MeshRenderer.Container*
-  commentId: Overload:RayGame.MeshRenderer.Container
-  href: RayGame.MeshRenderer.html#RayGame_MeshRenderer_Container
+- uid: RayGame.GameObject
+  commentId: T:RayGame.GameObject
+  parent: RayGame
+  href: RayGame.GameObject.html
+  name: GameObject
+  nameWithType: GameObject
+  fullName: RayGame.GameObject
+- uid: RayGame.SpriteRenderer.Container*
+  commentId: Overload:RayGame.SpriteRenderer.Container
+  href: RayGame.SpriteRenderer.html#RayGame_SpriteRenderer_Container
   name: Container
-  nameWithType: MeshRenderer.Container
-  fullName: RayGame.MeshRenderer.Container
+  nameWithType: SpriteRenderer.Container
+  fullName: RayGame.SpriteRenderer.Container
 - uid: RayGame.IRenderer.Container
   commentId: P:RayGame.IRenderer.Container
   parent: RayGame.IRenderer
@@ -482,12 +497,19 @@ references:
   name: Container
   nameWithType: IRenderer.Container
   fullName: RayGame.IRenderer.Container
-- uid: RayGame.MeshRenderer.Start*
-  commentId: Overload:RayGame.MeshRenderer.Start
-  href: RayGame.MeshRenderer.html#RayGame_MeshRenderer_Start
+- uid: RayGame.Transform
+  commentId: T:RayGame.Transform
+  parent: RayGame
+  href: RayGame.Transform.html
+  name: Transform
+  nameWithType: Transform
+  fullName: RayGame.Transform
+- uid: RayGame.SpriteRenderer.Start*
+  commentId: Overload:RayGame.SpriteRenderer.Start
+  href: RayGame.SpriteRenderer.html#RayGame_SpriteRenderer_Start
   name: Start
-  nameWithType: MeshRenderer.Start
-  fullName: RayGame.MeshRenderer.Start
+  nameWithType: SpriteRenderer.Start
+  fullName: RayGame.SpriteRenderer.Start
 - uid: RayGame.IRenderer.Start
   commentId: M:RayGame.IRenderer.Start
   parent: RayGame.IRenderer
@@ -507,12 +529,37 @@ references:
     href: RayGame.IRenderer.html#RayGame_IRenderer_Start
   - name: (
   - name: )
-- uid: RayGame.MeshRenderer.Update*
-  commentId: Overload:RayGame.MeshRenderer.Update
-  href: RayGame.MeshRenderer.html#RayGame_MeshRenderer_Update
+- uid: Raylib_cs.Texture2D
+  commentId: T:Raylib_cs.Texture2D
+  parent: Raylib_cs
+  isExternal: true
+  name: Texture2D
+  nameWithType: Texture2D
+  fullName: Raylib_cs.Texture2D
+- uid: RayGame.SpriteRenderer.GetSprite*
+  commentId: Overload:RayGame.SpriteRenderer.GetSprite
+  href: RayGame.SpriteRenderer.html#RayGame_SpriteRenderer_GetSprite
+  name: GetSprite
+  nameWithType: SpriteRenderer.GetSprite
+  fullName: RayGame.SpriteRenderer.GetSprite
+- uid: Raylib_cs
+  commentId: N:Raylib_cs
+  isExternal: true
+  name: Raylib_cs
+  nameWithType: Raylib_cs
+  fullName: Raylib_cs
+- uid: RayGame.SpriteRenderer.SetSprite*
+  commentId: Overload:RayGame.SpriteRenderer.SetSprite
+  href: RayGame.SpriteRenderer.html#RayGame_SpriteRenderer_SetSprite_Raylib_cs_Texture2D_
+  name: SetSprite
+  nameWithType: SpriteRenderer.SetSprite
+  fullName: RayGame.SpriteRenderer.SetSprite
+- uid: RayGame.SpriteRenderer.Update*
+  commentId: Overload:RayGame.SpriteRenderer.Update
+  href: RayGame.SpriteRenderer.html#RayGame_SpriteRenderer_Update
   name: Update
-  nameWithType: MeshRenderer.Update
-  fullName: RayGame.MeshRenderer.Update
+  nameWithType: SpriteRenderer.Update
+  fullName: RayGame.SpriteRenderer.Update
 - uid: RayGame.IRenderer.Update
   commentId: M:RayGame.IRenderer.Update
   parent: RayGame.IRenderer
@@ -532,15 +579,3 @@ references:
     href: RayGame.IRenderer.html#RayGame_IRenderer_Update
   - name: (
   - name: )
-- uid: RayGame.MeshRenderer.SetMesh*
-  commentId: Overload:RayGame.MeshRenderer.SetMesh
-  href: RayGame.MeshRenderer.html#RayGame_MeshRenderer_SetMesh_RayGame_Mesh_
-  name: SetMesh
-  nameWithType: MeshRenderer.SetMesh
-  fullName: RayGame.MeshRenderer.SetMesh
-- uid: RayGame.MeshRenderer.GetMesh*
-  commentId: Overload:RayGame.MeshRenderer.GetMesh
-  href: RayGame.MeshRenderer.html#RayGame_MeshRenderer_GetMesh
-  name: GetMesh
-  nameWithType: MeshRenderer.GetMesh
-  fullName: RayGame.MeshRenderer.GetMesh

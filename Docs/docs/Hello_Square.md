@@ -104,7 +104,7 @@ public class Main : IGameComponent
     {
         Console.WriteLine("Hello Component!");
 
-        square =Engine.CreateGameObject("My Square");
+        square = Engine.CreateGameObject("My Square");
         square.Transform.Position = new Vector2(400, 240);
         
         Mesh sqr = new Mesh(new[] { (10f, 10f), (-10f, 10f), (-10f, -10f), (10f, -10f) });

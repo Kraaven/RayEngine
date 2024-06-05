@@ -17,6 +17,8 @@ items:
     name: Mesh
   - uid: RayGame.MeshRenderer
     name: MeshRenderer
+  - uid: RayGame.SpriteRenderer
+    name: SpriteRenderer
   - uid: RayGame.Transform
     name: Transform
 - uid: RayGame.Demo
