@@ -530,6 +530,7 @@
             </summary>
             <param name="Vertices">An array of <see cref="T:System.Numerics.Vector2"/> representing the vertices of the mesh.</param>
             <param name="color">The color to use for rendering the lines.</param>
+            <exclude />
         </member>
     </members>
 </doc>
