@@ -76,15 +76,14 @@ public class SpriteRenderer : IRenderer
     /// </summary>
     public GameObject Container { get; set; }
 
-    private Texture2D sprite;
-
-    private Rectangle source;
-
+    // private Texture2D sprite;
+    private List<(Rectangle,Sprite)> SpriteList;
+    private int SpriteIndex;
     private Rectangle destination;
-
     private Vector2 Origin;
-    
     public Transform transform;
+    private (Rectangle ,Sprite) SelectedSprite;
+    
     // private Texture2D spritesheet;
     /// <summary>
     /// Initializes the renderer. This method is called when the renderer is first added to a <see cref="GameObject"/>.
@@ -93,26 +92,35 @@ public class SpriteRenderer : IRenderer
     {
         transform = new Transform();
         destination = new Rectangle();
-    }
-
-    /// <summary>
-    /// Retrieves the current sprite texture.
-    /// </summary>
-    /// <returns>The current <see cref="Texture2D"/> sprite.</returns>
-    public Texture2D GetSprite()
-    {
-        return sprite;
+        SpriteList = new();
+        SpriteIndex = 0;
     }
     
-    /// <summary>
-    /// Sets the sprite texture.
-    /// </summary>
-    /// <param name="inputSprite">The new <see cref="Texture2D"/> sprite to set.</param>
-    public void SetSprite(Texture2D ImputSprite)
+    public Sprite GetSprite(int SIndex)
     {
-        sprite = ImputSprite;
-        source = new Rectangle(0, 0, sprite.Width, sprite.Height);
-        
+        return SpriteList[SIndex].Item2;
+    }
+
+    public void SetIndex(int i)
+    {
+        if (i < SpriteList.Count)
+        {
+            SpriteIndex = i;
+        }
+    }
+
+    public void ChangeIndex(int i)
+    {
+        if (SpriteIndex + i < SpriteList.Count)
+        {
+            SpriteIndex += i;
+        }
+    }
+
+    public void AddSprite(Sprite InputSprite)
+    {
+        Rectangle src = new Rectangle(0,0,InputSprite.Image.Width,InputSprite.Image.Height);
+        SpriteList.Add(new (src,InputSprite));
     }
 
     /// <summary>
@@ -120,12 +128,15 @@ public class SpriteRenderer : IRenderer
     /// </summary>
     public void Update()
     {
+        SelectedSprite = SpriteList[SpriteIndex];
+        
+        
         destination.Position = Container.Transform.Position + transform.Position;
-        destination.Width = sprite.Width * (Container.Transform.Scale * transform.Scale);
-        destination.Height = sprite.Height * (Container.Transform.Scale* transform.Scale);
+        destination.Width = SelectedSprite.Item2.Image.Width * (Container.Transform.Scale * transform.Scale);
+        destination.Height = SelectedSprite.Item2.Image.Height * (Container.Transform.Scale* transform.Scale);
         Origin = new Vector2(destination.Width / 2, destination.Height / 2);
         
-        Raylib.DrawTexturePro(sprite,source,destination,Origin, Container.Transform.GetRotation() + transform.GetRotation(),Color.White);
+        Raylib.DrawTexturePro(SelectedSprite.Item2.Image,SelectedSprite.Item1,destination,Origin, Container.Transform.GetRotation() + transform.GetRotation(),Color.White);
         Console.WriteLine(destination);
     }
 }

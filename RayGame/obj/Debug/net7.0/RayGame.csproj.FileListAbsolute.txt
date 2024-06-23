@@ -20,5 +20,4 @@ C:\Users\dhruv\RiderProjects\RayGame\RayGame\bin\Debug\net7.0\runtimes\win-x64\n
 C:\Users\dhruv\RiderProjects\RayGame\RayGame\bin\Debug\net7.0\runtimes\win-x86\native\raylib.dll
 C:\Users\dhruv\RiderProjects\RayGame\RayGame\obj\Debug\net7.0\RayGame.csproj.AssemblyReference.cache
 C:\Users\dhruv\RiderProjects\RayGame\RayGame\obj\Debug\net7.0\RayGame.csproj.CopyComplete
-C:\Users\dhruv\RiderProjects\RayGame\RayGame\bin\Debug\net7.0\Demo\test.png
 C:\Users\dhruv\RiderProjects\RayGame\RayGame\bin\Debug\net7.0\RayGame.xml

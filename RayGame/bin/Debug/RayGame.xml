@@ -532,5 +532,20 @@
             <param name="color">The color to use for rendering the lines.</param>
             <exclude />
         </member>
+        <member name="P:RayGame.SpriteRenderer.Container">
+            <summary>
+            The Container is the reference to the <see cref="T:RayGame.GameObject"/> it is connected to.
+            </summary>
+        </member>
+        <member name="M:RayGame.SpriteRenderer.Start">
+            <summary>
+            Initializes the renderer. This method is called when the renderer is first added to a <see cref="T:RayGame.GameObject"/>.
+            </summary>
+        </member>
+        <member name="M:RayGame.SpriteRenderer.Update">
+            <summary>
+            Updates the renderer. This method is called once per frame.
+            </summary>
+        </member>
     </members>
 </doc>
