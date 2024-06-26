@@ -31,7 +31,7 @@
       }
     ],
     "output": "_site",
-    "template": ["default", "templates/unity"],
+    "template": ["default", "modern"],
     
     "globalMetadata": {
       "_appName": "",
